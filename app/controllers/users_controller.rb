@@ -2,18 +2,18 @@ class UsersController < ApplicationController
     before_action :authorize, only: [:show]
 
     def index 
-        users = user.all 
+        users = User.all 
         render json: users 
     end
 
     def create
-        signup = user.create!(user_params)
+        signup = User.create!(user_params)
         session[:user_id] = signup.id
         render json: signup, status: :created
     end
 
     def show
-        user = user.find_by(id: session[:user_id])
+        user = User.find_by(id: session[:user_id])
         render json: user
     end
 

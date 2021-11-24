@@ -6,4 +6,6 @@ class Event < ApplicationRecord
   has_many :transportations
   has_many :expenses
   has_many :packing_lists
+
+  validates :name, :location, :date, presence: true
 end

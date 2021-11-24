@@ -1,5 +1,9 @@
 class GuestSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :user, :event_name
   has_one :user
-  has_one :event
+
+  def event_name
+    object.event.name
+  end
+
 end

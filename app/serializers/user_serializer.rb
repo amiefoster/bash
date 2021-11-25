@@ -1,3 +1,9 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :name, :username, :password_digest, :image, :bio
+  attributes :id, :name, :username, :password_digest, :image, :bio, :all_events
+
+  def all_events
+    object.events.collect do |i|
+      i.name + " on " + i.date
+    end
+  end
 end

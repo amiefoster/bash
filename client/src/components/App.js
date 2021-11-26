@@ -3,7 +3,6 @@ import '../App.css';
 function App() {
   return (
     <div>
-      
         <div class="container">
 
           <div class="row justify-content-center">

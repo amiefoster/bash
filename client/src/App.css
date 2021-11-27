@@ -7,23 +7,37 @@
 }
 
 /* HEADER COLUMNS */
+.header-container{ 
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .header-left{
   border: solid 1px;
   text-align: left;
-  justify-content: center;
+  justify-content: left;
 }
 
 .header-right{
+  display: flex;
   border: solid 1px;
   text-align: right;
-  justify-content: center;
+  justify-content: right;
+}
 
+/* HOMEPAGE */
+.homepage-body{
+  border: solid 1px;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
 }
 
 /* BODY COLUMNS */
 .column-container{
   text-align: center;
   justify-content: center;
+  padding-top: 50px;
 
 }
 
@@ -37,6 +51,19 @@
 
 .column-right{
   border: solid 1px;
+}
+
+/* SIGN IN/UP FORMS */
+.login-form{
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.signup-form{
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
 }
 
 @keyframes App-logo-spin {

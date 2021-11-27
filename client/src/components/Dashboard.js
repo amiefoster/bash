@@ -1,10 +1,8 @@
-import HomeNav from "./HomeNav";
 
 function Dashboard({ user, setUser }) {
 
     return (
         <div>
-            <HomeNav />
             <h1>This is the Dashboard!</h1>
         </div>
     )

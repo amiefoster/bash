@@ -13,7 +13,7 @@ function HomeNav( { setUser = () => console.log('') }) {
     return (
         <div className="row header-container">
             <div className="col-sm-6 header-left">
-                <Link to="/dashboard">
+                <Link to="/">
                     <p className="logo">PLANZ</p>
                 </Link>
             </div>

@@ -1,4 +1,19 @@
+import { userParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
 function EventDetails() {
+    const { eventId } = useParams()
+    const [details, setDetails] = useState([])
+
+   useEffect(() => {
+       getDetails()
+   }, [eventId])
+
+   const getDetails = () => {
+       fetch(`/event/${eventId}`)
+       .then(r => r.json())
+       .then(json => setDetails(json))
+   }
 
     return (
         <div>

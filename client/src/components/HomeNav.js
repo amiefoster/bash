@@ -1,4 +1,5 @@
 import { NavLink, Link } from 'react-router-dom'
+import logo from '../images/logo.png'
 
 function HomeNav( { setUser = () => console.log('') }) {
 
@@ -14,7 +15,7 @@ function HomeNav( { setUser = () => console.log('') }) {
         <div className="row header-container">
             <div className="col-sm-6 header-left">
                 <Link to="/">
-                    <p className="logo">PLANZ</p>
+                    <img src={logo} className="logo"/>
                 </Link>
             </div>
 

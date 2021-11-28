@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import LoginForm from './LoginForm';
 import SignupForm from './SignupForm';
+import logo from '../images/logo.png'
+
 
 function LoginPage({ setUser = () => console.log('') }) {
   const [showLogin, setShowLogin] = useState(true);
@@ -13,7 +15,7 @@ function LoginPage({ setUser = () => console.log('') }) {
         <div className="row justify-content-center">
             
             <div class="row justify-content-center header-container">
-              <div class="col-sm-6 header-left">LOGO goes here</div>
+              <div class="col-sm-6 header-left"><img src={logo} className="logo" /></div>
               <div class="col-sm-6 header-right">Nav Links go here</div>
             </div>
 

@@ -1,9 +1,23 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap');
+
+body {
+  background-image: url("./images/background.png");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+ }
+
 * {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* LOGO */
+.logo{
+  height: 45px;
 }
 
 /* HEADER COLUMNS */

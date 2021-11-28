@@ -19,6 +19,9 @@ function App() {
     });
   }, []);
 
+  //checking to see if user stays logged in
+  console.log(user)
+
   if (!user) return <LoginPage setUser={setUser} />;
 
   return (

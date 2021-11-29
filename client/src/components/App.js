@@ -5,7 +5,7 @@ import Dashboard from "./Dashboard";
 import Profile from "./Profile";
 import LoginPage from "./LoginPage";
 import HomeNav from "./HomeNav";
-import EventContainer from "./EventContainer";
+import EventDetails from './EventDetails';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -20,7 +20,10 @@ function App() {
   }, []);
 
   //checking to see if user stays logged in
-  console.log(user)
+  // const checkIfUserExists = (loggedInUser) => {
+  //   if (!!user) {setUser(loggedInUser)}
+  // }
+  //console.log(user)
 
   if (!user) return <LoginPage setUser={setUser} />;
 
@@ -31,7 +34,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Dashboard user={user} setUser={setUser} />} />
         <Route exact path="/profile" element={<Profile user={user} setUser={setUser} />} />
-        <Route exact path="/event/:eventId" element={<EventContainer user={user} />} />
+        <Route exact path="/events/:eventId" element={<EventDetails user={user} />} />
 
       </Routes>
     </div>
@@ -50,6 +53,8 @@ export default App;
         //Profile
     //this is where it will dynamically route to show all the users <Events/>
 
+
+//BOOTSTRAP GRID
 {/* <div class="container">
   <div class="row justify-content-center header-container">
     <div class="col-sm-6 header-left">LOGO goes here</div>

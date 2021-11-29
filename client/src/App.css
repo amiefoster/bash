@@ -1,11 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap');
 
-body {
-  background-image: url("./images/background.png");
-  background-repeat: no-repeat;
-  background-size: 100vw;
- }
 
 * {
   -webkit-transition: all 0.2s ease-out;
@@ -13,6 +8,8 @@ body {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   font-family: 'Work Sans', sans-serif;
+  background-color: #FDF7EF;
+
 }
 
 /* LOGO */
@@ -79,6 +76,24 @@ body {
   justify-content: center;
   padding: 10px;
 }
+
+/* EVENTS */
+.events{
+  border: solid 1px;
+  border-radius: 10px;
+  width: 250px;
+  height: 250px;
+  padding: 25px;
+  margin: 25px;
+  text-align: left;
+  justify-content: left;
+
+}
+
+
+
+
+
 
 @keyframes App-logo-spin {
   from {

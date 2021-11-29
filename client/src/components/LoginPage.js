@@ -14,9 +14,9 @@ function LoginPage({ setUser = () => console.log('') }) {
       <div className="container">
         <div className="row justify-content-center">
             
-            <div class="row justify-content-center header-container">
-              <div class="col-sm-6 header-left"><img src={logo} className="logo" /></div>
-              <div class="col-sm-6 header-right">Nav Links go here</div>
+            <div className="row justify-content-center header-container">
+              <div className="col-sm-6 header-left"><img src={logo} alt="logo" className="logo" /></div>
+              <div className="col-sm-6 header-right">Nav Links go here</div>
             </div>
 
           <div className="col-md-6">

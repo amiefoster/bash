@@ -1,12 +1,19 @@
-import EventDetails from './EventDetails'
-import { Outlet, Link } from 'react-router-dom'
+import { Outlet, Link } from 'react-router-dom';
+import Event from './Event';
 
-function EventContainer() {
+function EventContainer( { userEvents , user } ) {
 
     return (
         <div>
-            <h1>This is the EventContainer!</h1>
-            <EventDetails />
+            {!!userEvents && userEvents.map((event, i) =>
+                <div id={i}> 
+                    <Link to={`/events/${event.id}`}>
+                        <Event userEvent={event} />
+                    </Link>
+                </div>
+            )}
+            <Outlet />
+            
         </div>
     )
 }

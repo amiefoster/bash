@@ -15,7 +15,7 @@ function HomeNav( { setUser = () => console.log('') }) {
         <div className="row header-container">
             <div className="col-sm-6 header-left">
                 <Link to="/">
-                    <img src={logo} className="logo"/>
+                    <img src={logo} alt="logo" className="logo"/>
                 </Link>
             </div>
 

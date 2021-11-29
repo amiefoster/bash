@@ -24,11 +24,12 @@ function LoginForm({ setUser = () => console.log('') }) {
         }
         });
     }
+    console.log(errors)
 
 
   return (
     <div className="container">
-      <div class="row justify-content-center">
+      <div className="row justify-content-center">
         <div className="col-sm-6 login-form">
           <h1>This is the LoginForm!</h1>
 

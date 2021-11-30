@@ -12,7 +12,7 @@ function Dashboard({ user, setUser }) {
 
   const checkIfEventsExist = (eventsArray) => {
     if (!!eventsArray) {
-        const filteredEvents = eventsArray.filter((event) => event.user.id === user.id)
+        const filteredEvents = eventsArray.filter((event) => event.user.id == user.id)
         setEvents(filteredEvents)
     }
   };

@@ -24,7 +24,7 @@ function App() {
   // const checkIfUserExists = (loggedInUser) => {
   //   if (!!user) {setUser(loggedInUser)}
   // }
-  //console.log(user)
+  console.log(user)
 
   if (!user) return <LoginPage setUser={setUser} />;
 

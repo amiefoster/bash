@@ -12,9 +12,15 @@
 
 }
 
+.nav-link {
+  text-decoration: none;
+  color: #010101;
+}
+
 /* LOGO */
 .logo{
-  height: 45px;
+  padding-top: 10px;
+  height: 60px;
 }
 
 /* HEADER COLUMNS */
@@ -24,14 +30,14 @@
 }
 
 .header-left{
-  border: solid 1px;
+  /* border: solid 1px; */
   text-align: left;
   justify-content: left;
 }
 
 .header-right{
   display: flex;
-  border: solid 1px;
+  /* border: solid 1px; */
   text-align: right;
   justify-content: right;
 }
@@ -79,7 +85,7 @@
 
 /* EVENTS */
 .events{
-  border: solid 1px;
+  border: solid black 1px;
   border-radius: 10px;
   width: 250px;
   height: 250px;
@@ -87,9 +93,29 @@
   margin: 25px;
   text-align: left;
   justify-content: left;
-
+  box-shadow: 0px 20px 40px 15px rgba(49, 16, 41, 0.05);
+  overflow: hidden;
 }
 
+.add-event-container{
+  justify-content: right;
+  /* border: 1px solid; */
+}
+
+.add-event-button{
+  border-radius: 10px;
+}
+
+.event-link {
+    text-decoration: none;
+    font-weight: 300px;
+    color: black;
+}
+
+.event-link:hover{
+  font-weight: 600px;
+  color: purple;
+}
 
 
 

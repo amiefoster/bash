@@ -1,5 +1,7 @@
 import { NavLink, Link } from 'react-router-dom'
 import logo from '../images/logo.png'
+import Profile from '../images/profile.png'
+import Logout from '../images/logout.png'
 
 function HomeNav( { setUser = () => console.log('') }) {
 
@@ -21,11 +23,10 @@ function HomeNav( { setUser = () => console.log('') }) {
 
             <div className="col-sm-6 header-right">
                 <NavLink to="/profile" className="nav-link">
-                        <p>My Profile</p>
+                        <img src={Profile} alt="profile icon" />
                 </NavLink>
-                <button className="nav-link" onClick={handleLogoutClick}>
-                        <p>Log Out</p>
-                </button>
+                <img src={Logout} alt="logout icon" className="nav-link" onClick={handleLogoutClick} />
+                
             </div>
         </div>
     )

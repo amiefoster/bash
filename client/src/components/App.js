@@ -5,7 +5,8 @@ import Dashboard from "./Dashboard";
 import Profile from "./Profile";
 import LoginPage from "./LoginPage";
 import HomeNav from "./HomeNav";
-import EventDetails from './EventDetails';
+import EventDetails from "./EventDetails";
+import EventDetailsContainer from './EventDetailsContainer';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -35,6 +36,7 @@ function App() {
         <Route exact path="/" element={<Dashboard user={user} setUser={setUser} />} />
         <Route exact path="/profile" element={<Profile user={user} setUser={setUser} />} />
         <Route exact path="/events/:eventId" element={<EventDetails user={user} />} />
+        {/* <Route exact path="/events/:eventId/details" element={<EventDetails user = {user} />} /> */}
 
       </Routes>
     </div>

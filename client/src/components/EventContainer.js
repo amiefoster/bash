@@ -1,13 +1,25 @@
 import { Outlet, Link } from 'react-router-dom';
 import Event from './Event';
+import Add from '../images/add.png'
+
 
 function EventContainer( { userEvents , user } ) {
 
+    const handleAddEvent = () => {
+        console.log("I've been clicked!")
+    }
+
     return (
-        <div>
+        <div className="container">
+            <div class="row add-event-container">
+                <div class="col-sm-2 ">
+                    <img src={Add} className="add-event-button" onclick={() => handleAddEvent}/>
+                </div>
+            </div>
+
             {!!userEvents && userEvents.map((event, i) =>
-                <div id={i}> 
-                    <Link to={`/events/${event.id}`}>
+                <div id={i} key={i}> 
+                    <Link className="event-link" key={i} to={`/events/${event.id}`}>
                         <Event userEvent={event} />
                     </Link>
                 </div>

@@ -6,7 +6,6 @@ import Profile from "./Profile";
 import LoginPage from "./LoginPage";
 import HomeNav from "./HomeNav";
 import EventDetails from "./EventDetails";
-import EventDetailsContainer from './EventDetailsContainer';
 
 function App() {
   const [user, setUser] = useState(null);

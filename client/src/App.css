@@ -27,6 +27,7 @@
 .header-container{ 
   padding-top: 50px;
   padding-bottom: 50px;
+  padding-left: 20px;
 }
 
 .header-left{
@@ -97,6 +98,12 @@
   overflow: hidden;
 }
 
+.events-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .add-event-container{
   justify-content: right;
   /* border: 1px solid; */
@@ -104,6 +111,11 @@
 
 .add-event-button{
   border-radius: 10px;
+}
+
+.add-event-button:hover{
+  border-radius: 1000px;
+  box-shadow: 1px 1px 2px 1px rgba(0,0,0,.8);
 }
 
 .event-link {
@@ -122,6 +134,12 @@
   align-items: right;
 }
 
+.add-details-button:hover{
+  box-shadow: 1px 1px 2px 1px rgba(0,0,0,.8);
+  border-radius: 1000px;
+
+}
+
 .details-column-middle {
   display: flex;
   flex-wrap: wrap;
@@ -130,6 +148,58 @@
 
 .details-card{
   margin: 10px;  
+}
+
+.details-header-left{
+  text-align: left;
+  justify-content: left;
+  padding-left: 20px;
+  border: solid 1px;
+}
+
+.details-header-right{
+  text-align: right;
+  justify-content: right;
+  padding-right: 20px;
+  padding-top: 0;
+  border: solid 1px;
+
+}
+
+.border{
+  border: solid 1px
+}
+
+/* MODAL */
+body.active-modal {
+  overflow-y: hidden;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  background: rgba(49,49,49,0.8);
+}
+
+.modal-form-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background-color: #FDF7EF;
+  padding: 14px 28px;
+  border-radius: 10px;
+  max-width: 600px;
+  min-width: 300px;
 }
 
 

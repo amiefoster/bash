@@ -1,6 +1,5 @@
 
 function Event({ userEvent }) {
-    console.log(userEvent.name)
 
     return (
         <div className="container">

@@ -62,7 +62,7 @@ function EventDetails({}) {
                     <div className="card-header">
                         Guests <img src={Add} alt="add button" className="add-details-button" onClick={console.log("ive been clicked!")}/>
                     </div>
-                        {!!details && details.guests.map(guest => <li className="list-group-item">{guest.user.name}</li>)}
+                        {!!details && details.guests.map(guest => <li key={guest.id} className="list-group-item">{guest.user.name}</li>)}
                 </div>
 
                
@@ -70,34 +70,34 @@ function EventDetails({}) {
                     <div className="card-header">
                         Accommodations <img src={Add} alt="add button" className="add-details-button" onClick={console.log("ive been clicked!")}/>
                     </div>
-                    {details.accommodations.map(stay => <li className="list-group-item">{stay.name} Located at: {stay.address}</li>)}
+                    {details.accommodations.map(stay => <li key={stay.id} className="list-group-item">{stay.name} Located at: {stay.address}</li>)}
                 </div>
 
                 <div className="card details-card" style={{width: "15rem"}}>
                     <div className="card-header">
                         Transportation <img src={Add} alt="add button" className="add-details-button" onClick={console.log("ive been clicked!")}/>
                     </div>
-                    {details.transportations.map(transportation => <li className="list-group-item">{transportation.mode} - {transportation.date} - {transportation.details}</li>)}
+                    {details.transportations.map(transportation => <li key={transportation.id} className="list-group-item">{transportation.mode} - {transportation.date} - {transportation.details}</li>)}
                 </div>
 
                 <div className="card details-card" style={{width: "15rem"}}>
                     <div className="card-header">
                         Expenses <img src={Add} alt="add button" className="add-details-button" onClick={console.log("ive been clicked!")}/>
                     </div>
-                    <p> {details.expenses.map(expense => <li className="list-group-item">{expense.name} - {expense.details} - ${expense.amount}</li>)}</p>
+                    <p> {details.expenses.map(expense => <li key={expense.id} className="list-group-item">{expense.name} - {expense.details} - ${expense.amount}</li>)}</p>
                 </div>
 
                 <div className="card details-card" style={{width: "15rem"}}>
                     <div className="card-header">
                         Packing List <img src={Add} alt="add button" className="add-details-button" onClick={console.log("ive been clicked!")}/>
                     </div>
-                    <p> {details.packing_lists.map(item => <li className="list-group-item">{item.item}</li>)}</p>
+                    <p> {details.packing_lists.map(item => <li key={item.id} className="list-group-item">{item.item}</li>)}</p>
                 </div>
             </div>
 
             <div className="col-md-4 column-right">
                 <div>
-                    <p>Activities: {details.activities.map(activity => <li>{activity.name} - {activity.description}</li>)}</p>
+                    <p>Activities: {details.activities.map(activity => <li key={activity.id} >{activity.name} - {activity.description}</li>)}</p>
                 </div>
             </div>
 

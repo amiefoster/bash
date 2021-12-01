@@ -1,6 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
 
 * {
   -webkit-transition: all 0.2s ease-out;
@@ -8,7 +6,7 @@
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   font-family: 'Work Sans', sans-serif;
-  background-color: #FDF7EF;
+  background-color: #fff2fb;
 }
 
 .nav-link {
@@ -126,13 +124,21 @@
 
 .event-link {
     text-decoration: none;
-    font-weight: 300px;
-    color: black;
+    color: inherit;
 }
 
 .event-link:hover{
-  font-weight: 600px;
-  color: purple;
+  color: white;  
+}
+
+.events:hover{
+  background-color: black;
+}
+.events h1{
+  background: none;
+}
+.events p{
+  background: none;
 }
 
 /* EVENT DETIALS */
@@ -140,6 +146,7 @@
   align-items: right;
   cursor: pointer;
   transform: scale(.9);
+  background: none;
 }
 
 .add-details-button:hover{
@@ -175,6 +182,24 @@
 
 .border{
   border: solid 1px
+}
+
+/* DETAILS CARD COLOR */
+.guest-header-bg{
+  background-color: #ff7ad8!important
+}
+
+.accommodation-header-bg{
+  background-color: #2fe885!important
+}
+.transportation-header-bg{
+  background-color: #ffa451!important
+}
+.expense-header-bg{
+  background-color: #52f1f0!important
+}
+.list-header-bg{
+  background-color: #ae79fa!important
 }
 
 /* MODAL */

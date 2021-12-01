@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import LoginForm from './LoginForm';
 import SignupForm from './SignupForm';
-import logo from '../images/logo.png'
+import logo from '../images/logo-1.png'
 
 
 function LoginPage({ setUser = () => console.log('') }) {

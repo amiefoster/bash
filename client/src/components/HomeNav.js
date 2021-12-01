@@ -1,5 +1,5 @@
 import { NavLink, Link } from 'react-router-dom'
-import logo from '../images/logo.png'
+import logo from '../images/logo-1.png'
 import Profile from '../images/profile.png'
 import Logout from '../images/logout.png'
 

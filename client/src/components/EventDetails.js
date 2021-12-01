@@ -80,44 +80,40 @@ function EventDetails({}) {
                 {guestForm && <GuestForm toggleGuestForm={toggleGuestForm} />}
                 
                 <div className="card details-card" style={{width: "15rem"}}>
-                    <div className="card-header">
+                    <div className="card-header guest-header-bg">
                         Guests <img src={Add} alt="add button" className="add-details-button" onClick={toggleGuestForm}/>
                     </div>
-                        {!!details && details.guests.map(guest => <li key={guest.id} className="list-group-item">{guest.user.name}</li>)}
+                        {!!details && details.guests.map(guest => <li key={guest.id} className="list-group-item" style={{backgroundColor: "#fdddf4"}}>{guest.user.name}</li>)}
                 </div>
-                    {/* {guestForm && <GuestForm toggleGuestForm={toggleGuestForm} />} */}
                
-                <div className="card details-card" style={{width: "15rem"}}>
+                <div className="card details-card accommodation-header-bg" style={{width: "15rem"}}>
                     <div className="card-header">
                         Accommodations <img src={Add} alt="add button" className="add-details-button" onClick={toggleAccommodationForm}/>
                     </div>
-                    {details.accommodations.map(stay => <li key={stay.id} className="list-group-item">{stay.name} Located at: {stay.address}</li>)}
+                    {details.accommodations.map(stay => <li key={stay.id} className="list-group-item" style={{backgroundColor: "#c5ebd7"}}>{stay.name} Located at: {stay.address}</li>)}
                 </div>
-                    {/* {accommodationForm && <AccommodationForm toggleAccommodationForm={toggleAccommodationForm} />} */}
 
-                <div className="card details-card" style={{width: "15rem"}}>
+                <div className="card details-card transportation-header-bg" style={{width: "15rem"}}>
                     <div className="card-header">
                         Transportation <img src={Add} alt="add button" className="add-details-button" onClick={toggleTransportationForm}/>
                     </div>
-                    {details.transportations.map(transportation => <li key={transportation.id} className="list-group-item">{transportation.mode} - {transportation.date} - {transportation.details}</li>)}
+                    {details.transportations.map(transportation => <li key={transportation.id} className="list-group-item" style={{backgroundColor: "#ffdec0"}}>{transportation.mode} - {transportation.date} - {transportation.details}</li>)}
                 </div>
-                    {/* {transportationForm && <TransportationForm toggleTransportationForm={toggleTransportationForm}/>} */}
 
-                <div className="card details-card" style={{width: "15rem"}}>
+                <div className="card details-card expense-header-bg" style={{width: "15rem"}}>
                     <div className="card-header">
                         Expenses <img src={Add} alt="add button" className="add-details-button" onClick={toggleExpenseForm}/>
                     </div>
-                    <p> {details.expenses.map(expense => <li key={expense.id} className="list-group-item">{expense.name} - {expense.details} - ${expense.amount}</li>)}</p>
+                    {details.expenses.map(expense => <li key={expense.id} className="list-group-item" style={{backgroundColor: "#cbfcfb"}}>{expense.name} - {expense.details} - ${expense.amount}</li>)}
                 </div>
-                    {/* {expenseForm && <ExpenseForm toggleExpenseForm={toggleExpenseForm} />} */}
 
-                <div className="card details-card" style={{width: "15rem"}}>
+                <div className="card details-card list-header-bg" style={{width: "15rem"}}>
                     <div className="card-header">
                         Packing List <img src={Add} alt="add button" className="add-details-button" onClick={togglePackingListForm}/>
                     </div>
-                    <p> {details.packing_lists.map(item => <li key={item.id} className="list-group-item">{item.item}</li>)}</p>
+                    {details.packing_lists.map(item => <li key={item.id} className="list-group-item" style={{backgroundColor: "#e7dafa"}}>{item.item}</li>)}
                 </div>
-                    {/* {packingListForm && <PackingListForm togglePackingListForm={togglePackingListForm} />} */}
+
             </div>
 
             <div className="col-md-3 column-right">

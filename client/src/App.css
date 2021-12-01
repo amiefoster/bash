@@ -89,7 +89,7 @@
 
 /* EVENTS */
 .events{
-  border: solid black 1px;
+  border: solid #e7dafa 2px;
   border-radius: 10px;
   width: 250px;
   height: 250px;
@@ -132,7 +132,8 @@
 }
 
 .events:hover{
-  background-color: black;
+  background-color: #ae79fa;
+  border: none;
 }
 .events h1{
   background: none;

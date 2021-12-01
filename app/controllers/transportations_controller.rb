@@ -6,6 +6,10 @@ class TransportationsController < ApplicationController
 
     end
 
+    def index
+        render json: Transportation.all
+    end
+
     private
 
     def transportation_params

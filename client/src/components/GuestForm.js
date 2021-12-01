@@ -18,3 +18,5 @@ function GuestForm( { toggleGuestForm } ) {
 }
 
 export default GuestForm;
+
+//going to make a POST request to /guests and give it an id of the events id

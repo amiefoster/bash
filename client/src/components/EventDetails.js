@@ -8,7 +8,7 @@ import TransportationForm from './TransportationForm';
 import ExpenseForm from "./ExpenseForm";
 import PackingListForm from './PackingListForm'
 
-function EventDetails({}) {
+function EventDetails({user}) {
   const { eventId } = useParams();
   const [details, setDetails] = useState();
   const [guestForm, setGuestForm] = useState(false);
@@ -47,8 +47,7 @@ function EventDetails({}) {
     }
     const togglePackingListForm = () => {
         setPackingListForm(!packingListForm)
-    }
-  
+    }  
 
   return (
     <div>         
@@ -73,11 +72,11 @@ function EventDetails({}) {
             </div>
 
             <div className="col-md-4 details-column-middle">
-                {packingListForm && <PackingListForm togglePackingListForm={togglePackingListForm} />}
-                {expenseForm && <ExpenseForm toggleExpenseForm={toggleExpenseForm} />}
-                {transportationForm && <TransportationForm toggleTransportationForm={toggleTransportationForm}/>}
-                {accommodationForm && <AccommodationForm toggleAccommodationForm={toggleAccommodationForm} />}
-                {guestForm && <GuestForm toggleGuestForm={toggleGuestForm} />}
+                {packingListForm && <PackingListForm togglePackingListForm={togglePackingListForm} id={eventId} user={user} />}
+                {expenseForm && <ExpenseForm toggleExpenseForm={toggleExpenseForm} id={eventId} user={user} />}
+                {transportationForm && <TransportationForm toggleTransportationForm={toggleTransportationForm} id={eventId} user={user}/>}
+                {accommodationForm && <AccommodationForm toggleAccommodationForm={toggleAccommodationForm} id={eventId} user={user}/>}
+                {guestForm && <GuestForm toggleGuestForm={toggleGuestForm} id={eventId} user={user}/>}
                 
                 <div className="card details-card" style={{width: "15rem"}}>
                     <div className="card-header guest-header-bg">
@@ -90,7 +89,7 @@ function EventDetails({}) {
                     <div className="card-header">
                         Accommodations <img src={Add} alt="add button" className="add-details-button" onClick={toggleAccommodationForm}/>
                     </div>
-                    {details.accommodations.map(stay => <li key={stay.id} className="list-group-item" style={{backgroundColor: "#c5ebd7"}}>{stay.name} Located at: {stay.address}</li>)}
+                    {details.accommodations.map(stay => <li key={stay.id} className="list-group-item" style={{backgroundColor: "#c5ebd7"}}>{stay.name} - Located at: {stay.address}</li>)}
                 </div>
 
                 <div className="card details-card transportation-header-bg" style={{width: "15rem"}}>

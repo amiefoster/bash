@@ -1,11 +1,21 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 //import { useParams } from 'react-router-dom';
-import Add from '../images/small-add.png'
+import Add from '../images/small-add.png';
+import GuestForm from './GuestForm';
+import AccommodationForm from "./AccommodationForm";
+import TransportationForm from './TransportationForm';
+import ExpenseForm from "./ExpenseForm";
+import PackingListForm from './PackingListForm'
 
 function EventDetails({}) {
   const { eventId } = useParams();
   const [details, setDetails] = useState();
+  const [guestForm, setGuestForm] = useState(false);
+  const [accommodationForm, setAccommodationForm] = useState(false);
+  const [transportationForm, setTransportationForm] = useState(false);
+  const [expenseForm, setExpenseForm] = useState(false);
+  const [packingListForm, setPackingListForm] = useState(false);
   
   useEffect(() => {
     getDetails();
@@ -23,23 +33,28 @@ function EventDetails({}) {
        }
   };
 
-{/* <div class="card" style="width: 18rem;">
-  <div class="card-header">
-    Featured <img src={Add} alt="add button" onClick={console.log("ive been clicked!")}/>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-  </ul>
-</div> */}
+    const toggleGuestForm = () => {
+    setGuestForm(!guestForm)
+    }
+    const toggleAccommodationForm = () => {
+        setAccommodationForm(!accommodationForm)
+    }
+    const toggleTransportationForm = () => {
+        setTransportationForm(!transportationForm)
+    }
+    const toggleExpenseForm = () => {
+        setExpenseForm(!expenseForm)
+    }
+    const togglePackingListForm = () => {
+        setPackingListForm(!packingListForm)
+    }
   
 
   return (
     <div>         
         { details &&
         <div className="row column-container">
-            <div className="col-md-4 column-left">
+            <div className="col-md-3 column-left">
                 <div className="details-left">
                     <h1>{details.name}</h1>
                 </div>
@@ -58,46 +73,56 @@ function EventDetails({}) {
             </div>
 
             <div className="col-md-4 details-column-middle">
+                {packingListForm && <PackingListForm togglePackingListForm={togglePackingListForm} />}
+                {expenseForm && <ExpenseForm toggleExpenseForm={toggleExpenseForm} />}
+                {transportationForm && <TransportationForm toggleTransportationForm={toggleTransportationForm}/>}
+                {accommodationForm && <AccommodationForm toggleAccommodationForm={toggleAccommodationForm} />}
+                {guestForm && <GuestForm toggleGuestForm={toggleGuestForm} />}
+                
                 <div className="card details-card" style={{width: "15rem"}}>
                     <div className="card-header">
-                        Guests <img src={Add} alt="add button" className="add-details-button" onClick={console.log("ive been clicked!")}/>
+                        Guests <img src={Add} alt="add button" className="add-details-button" onClick={toggleGuestForm}/>
                     </div>
                         {!!details && details.guests.map(guest => <li key={guest.id} className="list-group-item">{guest.user.name}</li>)}
                 </div>
-
+                    {/* {guestForm && <GuestForm toggleGuestForm={toggleGuestForm} />} */}
                
                 <div className="card details-card" style={{width: "15rem"}}>
                     <div className="card-header">
-                        Accommodations <img src={Add} alt="add button" className="add-details-button" onClick={console.log("ive been clicked!")}/>
+                        Accommodations <img src={Add} alt="add button" className="add-details-button" onClick={toggleAccommodationForm}/>
                     </div>
                     {details.accommodations.map(stay => <li key={stay.id} className="list-group-item">{stay.name} Located at: {stay.address}</li>)}
                 </div>
+                    {/* {accommodationForm && <AccommodationForm toggleAccommodationForm={toggleAccommodationForm} />} */}
 
                 <div className="card details-card" style={{width: "15rem"}}>
                     <div className="card-header">
-                        Transportation <img src={Add} alt="add button" className="add-details-button" onClick={console.log("ive been clicked!")}/>
+                        Transportation <img src={Add} alt="add button" className="add-details-button" onClick={toggleTransportationForm}/>
                     </div>
                     {details.transportations.map(transportation => <li key={transportation.id} className="list-group-item">{transportation.mode} - {transportation.date} - {transportation.details}</li>)}
                 </div>
+                    {/* {transportationForm && <TransportationForm toggleTransportationForm={toggleTransportationForm}/>} */}
 
                 <div className="card details-card" style={{width: "15rem"}}>
                     <div className="card-header">
-                        Expenses <img src={Add} alt="add button" className="add-details-button" onClick={console.log("ive been clicked!")}/>
+                        Expenses <img src={Add} alt="add button" className="add-details-button" onClick={toggleExpenseForm}/>
                     </div>
                     <p> {details.expenses.map(expense => <li key={expense.id} className="list-group-item">{expense.name} - {expense.details} - ${expense.amount}</li>)}</p>
                 </div>
+                    {/* {expenseForm && <ExpenseForm toggleExpenseForm={toggleExpenseForm} />} */}
 
                 <div className="card details-card" style={{width: "15rem"}}>
                     <div className="card-header">
-                        Packing List <img src={Add} alt="add button" className="add-details-button" onClick={console.log("ive been clicked!")}/>
+                        Packing List <img src={Add} alt="add button" className="add-details-button" onClick={togglePackingListForm}/>
                     </div>
                     <p> {details.packing_lists.map(item => <li key={item.id} className="list-group-item">{item.item}</li>)}</p>
                 </div>
+                    {/* {packingListForm && <PackingListForm togglePackingListForm={togglePackingListForm} />} */}
             </div>
 
-            <div className="col-md-4 column-right">
+            <div className="col-md-3 column-right">
                 <div>
-                    <p>Activities: {details.activities.map(activity => <li key={activity.id} >{activity.name} - {activity.description}</li>)}</p>
+                    <p>Activities {details.activities.map(activity => <li key={activity.id} >{activity.name} - {activity.description}</li>)}</p>
                 </div>
             </div>
 

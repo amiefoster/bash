@@ -7,6 +7,8 @@ import AccommodationForm from "./AccommodationForm";
 import TransportationForm from './TransportationForm';
 import ExpenseForm from "./ExpenseForm";
 import PackingListForm from './PackingListForm'
+import ActivityForm from "./ActivityForm";
+import TimelineContainer from "./TimelineContainer";
 
 function EventDetails({user}) {
   const { eventId } = useParams();
@@ -16,10 +18,11 @@ function EventDetails({user}) {
   const [transportationForm, setTransportationForm] = useState(false);
   const [expenseForm, setExpenseForm] = useState(false);
   const [packingListForm, setPackingListForm] = useState(false);
+  const [activityForm, setActivityForm] = useState(false)
   
   useEffect(() => {
     getDetails();
-  }, [eventId,guestForm, accommodationForm, transportationForm, expenseForm, packingListForm]);
+  }, [eventId, guestForm, accommodationForm, transportationForm, expenseForm, packingListForm, activityForm]);
 
   const getDetails = () => {
     fetch(`/events/${eventId}`)
@@ -58,6 +61,9 @@ function EventDetails({user}) {
     const togglePackingListForm = () => {
         setPackingListForm(!packingListForm)
     }  
+    const toggleActivityForm = () => {
+        setActivityForm(!activityForm)
+    }
 
   return (
     <div>         
@@ -87,7 +93,7 @@ function EventDetails({user}) {
                 {transportationForm && <TransportationForm toggleTransportationForm={toggleTransportationForm} id={eventId} user={user}/>}
                 {accommodationForm && <AccommodationForm toggleAccommodationForm={toggleAccommodationForm} id={eventId} user={user}/>}
                 {guestForm && <GuestForm className="modal-form-shadow" toggleGuestForm={toggleGuestForm} id={eventId} user={user}/>}
-                
+                {activityForm && <ActivityForm className="modal-form-shadow" toggleActivityForm={toggleActivityForm} id={eventId} user={user}/>}
                 <div className="card details-card" style={{width: "15rem"}}>
                     <div className="card-header guest-header-bg">
                         Guests <img src={Add} alt="add button" className="add-details-button" onClick={toggleGuestForm}/>
@@ -128,8 +134,9 @@ function EventDetails({user}) {
             </div>
 
             <div className="col-md-4 column-right">
-                <div>
-                    <div> <h1>Activities</h1> {details.activities.map(activity => <li key={activity.id} >{activity.name} - {activity.description}</li>)}</div>
+                <h1>Itinerary <img src={Add} alt="add button" className="add-details-button" onClick={toggleActivityForm}/> </h1>
+                <div> 
+                    {details.activities.map(activity => <TimelineContainer activity={activity} />)}
                 </div>
             </div>
 

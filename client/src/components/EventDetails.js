@@ -19,7 +19,7 @@ function EventDetails({user}) {
   
   useEffect(() => {
     getDetails();
-  }, [eventId]);
+  }, [eventId,guestForm, accommodationForm, transportationForm, expenseForm, packingListForm]);
 
   const getDetails = () => {
     fetch(`/events/${eventId}`)

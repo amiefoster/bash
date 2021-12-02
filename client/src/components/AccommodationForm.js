@@ -33,11 +33,6 @@ function AccommodationForm( { toggleAccommodationForm, id } ) {
             toggleAccommodationForm()})
     }
 
-    const refreshPage = ()=>{
-        window.location.reload();
-     }
-
-
     return (
         <div className="modal-form">
            <div onClick={toggleAccommodationForm} className="overlay"></div>
@@ -72,7 +67,7 @@ function AccommodationForm( { toggleAccommodationForm, id } ) {
                     </div>
                     
                     <div style={{backgroundColor: "#c5ebd7"}}>
-                        <button className="new-detail-button" type="submit" onClick={refreshPage} >Done</button>
+                        <button className="new-detail-button" type="submit" >Done</button>
                     </div>
                 </form>             
 

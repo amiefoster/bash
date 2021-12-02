@@ -31,7 +31,7 @@ function LoginForm({ setUser = () => console.log('') }) {
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-sm-6 login-form">
-          <h1>This is the LoginForm!</h1>
+          <h6>Please login to start making planz!</h6>
 
             <form onSubmit={(e) => handleSubmit(e)} className="login-box">
                 <div className="login-text-field">
@@ -59,7 +59,7 @@ function LoginForm({ setUser = () => console.log('') }) {
                 />
                 </div>
                 <div>
-                <button className="signout-button margin-center" type="submit">
+                <button className="new-detail-button margin-center" type="submit">
                     {isLoading ? "Loading..." : "Login"}
                 </button>
                 </div>

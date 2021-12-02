@@ -31,10 +31,6 @@ function PackingListForm( { togglePackingListForm, id } ) {
             togglePackingListForm()})
     }
 
-    const refreshPage = ()=>{
-        window.location.reload();
-     }
-
     return (
         <div className="modal-form">
            <div onClick={togglePackingListForm} className="overlay"></div>
@@ -57,7 +53,7 @@ function PackingListForm( { togglePackingListForm, id } ) {
                     </div>
                     
                     <div style={{backgroundColor: "#e7dafa"}}>
-                        <button className="new-detail-button" type="submit" onClick={refreshPage} >Done</button>
+                        <button className="new-detail-button" type="submit" >Done</button>
                     </div>
                 </form>                            
                 </div>

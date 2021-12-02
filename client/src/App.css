@@ -80,6 +80,22 @@
   padding: 10px;
 }
 
+.login-text-field{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  
+}
+.login-text{
+  height: 40px;
+  width: 300px;
+  border: solid black 1px;
+  background: none;
+
+}
+.login-text:hover{
+  border: solid black 2px;
+}
+
 .signup-form{
   text-align: center;
   justify-content: center;
@@ -201,7 +217,24 @@
 }
 .new-detail-button:hover{
   color: white;
-  background-color: black;
+  background-color: #ae79fa;
+}
+
+.event-form-text{
+  height: 40px;
+  width: 300px;
+  border: solid black 1px;
+  
+}
+
+.event-form-text:hover{
+  border: solid black 2px;
+}
+
+.new-event-text-field{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: inherit;  
 }
 
 /* DETAILS CARD COLOR */
@@ -262,6 +295,20 @@
   margin: 0px auto;
 }
 
+.profile-image:hover{
+  animation-name: spin;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
 
 /* GRADIENT MOVING BCKGROUND */
 /* body {

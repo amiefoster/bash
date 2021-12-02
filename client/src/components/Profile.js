@@ -1,5 +1,6 @@
 function Profile({user}) {
     console.log(user)
+    
     return (
         <div className='container'>
         <div className='row justify-content-center'>

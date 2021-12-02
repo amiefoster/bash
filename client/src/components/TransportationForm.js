@@ -29,6 +29,7 @@ function TransportationForm( { toggleTransportationForm, id, user } ) {
                 date: formData.date,
                 details: formData.details,
                 event_id: id,
+                guest_id: user.id
                 
             }),
         })
@@ -37,11 +38,6 @@ function TransportationForm( { toggleTransportationForm, id, user } ) {
             toggleTransportationForm()})
     }
 
-    const refreshPage = ()=>{
-        window.location.reload();
-     }
-
-
     return (
         <div className="modal-form">
            <div onClick={toggleTransportationForm} className="overlay"></div>
@@ -49,7 +45,7 @@ function TransportationForm( { toggleTransportationForm, id, user } ) {
 
                     <h3 style={{backgroundColor: "#ffdec0"}}>Add Transportation</h3>
 
-                        <form className="new-event-form" onSubmit={console.log("submit")}>
+                        <form className="new-event-form" onSubmit={handleSubmit}>
                             <div className="new-event-text-field" style={{backgroundColor: "#ffdec0"}}>
                                 <label htmlFor="mode"></label>
                                 <input  
@@ -88,7 +84,7 @@ function TransportationForm( { toggleTransportationForm, id, user } ) {
                             </div>
                             
                             <div style={{backgroundColor: "#ffdec0"}}>
-                                <button className="new-detail-button" type="submit" onClick={console.log("refresh")} >Done</button>
+                                <button className="new-detail-button" type="submit">Done</button>
                             </div>
                         </form>                            
 

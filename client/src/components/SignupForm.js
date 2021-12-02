@@ -117,7 +117,7 @@ function SigninForm({ setUser }) {
               />
             </div>
             <div>
-              <button type="submit" className="signout-button margin-center">
+              <button type="submit" className="new-detail-button margin-center">
                 {isLoading ? "Loading..." : "Signup"}
               </button>
             </div>

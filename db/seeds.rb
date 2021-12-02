@@ -41,29 +41,29 @@ User.create!([
         name: "Carrie Bradshaw", 
         username: "cbradshaw", 
         password: "password", 
-        image: "Image", 
-        bio: "Bio"
+        image: "https://www.marieclaire.com.au/media/79640/cb-01.jpg?width=720&center=0.0,0.0", 
+        bio: "I love shoes!"
     }, 
     {
         name: "Samantha Jones", 
         username: "sjones", 
         password: "password", 
-        image: "Image", 
+        image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/kim-cattrall-samantha-jones-sex-and-the-city-1611304823.jpg", 
         bio: "Bio"
     }, 
     {
         name: "Charlotte York", 
         username: "cyork", 
         password: "password", 
-        image: "Image", 
+        image: "https://cdn.mos.cms.futurecdn.net/5HUkPz5pjsYvGTqf5xTtVP.jpg", 
         bio: "Bio"
     }, 
     {
         name: "Miranda Hobbs", 
         username: "mhobbs", 
         password: "password", 
-        image: "Image", 
-        bio: "Bio"
+        image: "https://corporette.com/wp-content/uploads/2008/05/miranda-hobbes-fashion.jpg", 
+        bio: "I'm a lawyer and I love hanging out with my gals!"
     }, 
     {
         name: "Denise Fritts", 
@@ -76,8 +76,8 @@ User.create!([
         name: "John Snow", 
         username: "jsnow", 
         password: "password", 
-        image: "Image", 
-        bio: "Bio"
+        image: "https://www.koimoi.com/wp-content/new-galleries/2021/10/game-of-thrones-trivia-when-kit-haringtons-night-of-partying-resulted-in-stand-ins-with-jon-snows-wigs-substituting-for-him-in-season-3-001.jpg", 
+        bio: "Life is too short! Im back and ready to make some planz!"
     }
 ])
 

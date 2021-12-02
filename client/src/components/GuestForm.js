@@ -43,11 +43,7 @@ function GuestForm( { toggleGuestForm, id, user } ) {
         .then(newGuest => {console.log(newGuest)
             toggleGuestForm()})
     }
-
-    const refreshPage = ()=>{
-        window.location.reload();
-     }
-
+    
     return (
         <div className="modal-form">
            <div onClick={toggleGuestForm} className="overlay"></div>

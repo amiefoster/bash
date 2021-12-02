@@ -37,20 +37,16 @@ function EventForm( {user, toggleForm, addEvent, events, setEvents } ) {
         .then(newEvent => {console.log(newEvent)
         toggleForm()})
     }
-
-    const refreshPage = ()=>{
-        window.location.reload();
-     }
      
     return (
        <div className="modal-form">
            <div onClick={toggleForm} className="overlay"></div>
-                <div className="modal-form-content">
+                <div className="modal-form-content" style={{backgroundColor: "#f5dfee"}}>
 
-                    <h3>Add New Event</h3>
+                    <h3 style={{backgroundColor: "#f5dfee"}}>Create New Event</h3>
 
-                    <form className="new-event-form" onSubmit={handleSubmit}>
-                        <div className="new-event-text-field">
+                    <form className="new-event-form" onSubmit={handleSubmit} style={{backgroundColor: "#f5dfee"}}>
+                        <div className="new-event-text-field" >
                             <label htmlFor="name"></label>
                             <input  
                                 className="event-form-text"
@@ -60,6 +56,7 @@ function EventForm( {user, toggleForm, addEvent, events, setEvents } ) {
                                 autoComplete="off"
                                 value={formData.name}
                                 onChange={handleChange}
+                                
                                 />
                         </div>
                         <div className="new-event-text-field">
@@ -97,9 +94,9 @@ function EventForm( {user, toggleForm, addEvent, events, setEvents } ) {
                                 value={formData.location}
                                 onChange={handleChange}
                                 />
-                        </div>
-                        <div>
-                            <button className="new-event-button" type="submit" onClick={refreshPage} >Add Event</button>
+                        </div >
+                        <div style={{backgroundColor: "#f5dfee"}}>
+                            <button className="new-detail-button"  type="submit" >Create</button>
                         </div>
                     </form>
 

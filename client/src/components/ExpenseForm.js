@@ -37,12 +37,6 @@ function ExpenseForm( { toggleExpenseForm, id, user } ) {
             toggleExpenseForm()})
     }
 
-    const refreshPage = ()=>{
-        window.location.reload();
-     }
-
-
-
     return (
         <div className="modal-form">
            <div onClick={toggleExpenseForm} className="overlay"></div>
@@ -89,7 +83,7 @@ function ExpenseForm( { toggleExpenseForm, id, user } ) {
                     </div>
                     
                     <div style={{backgroundColor: "#cbfcfb"}}>
-                        <button className="new-detail-button" type="submit" onClick={refreshPage} >Done</button>
+                        <button className="new-detail-button" type="submit" >Done</button>
                     </div>
                 </form>                              
 

@@ -17,7 +17,7 @@ function Dashboard({ user, setUser }) {
     fetch("/events").then((response) =>
       response.json().then((eventsArray) => checkIfEventsExist(eventsArray))
     );
-  }, []);
+  }, [newEventForm]);
 
   const checkIfEventsExist = (eventsArray) => {
     if (!!eventsArray) {
@@ -27,7 +27,7 @@ function Dashboard({ user, setUser }) {
   };
 
   const addEvent = (newEvent) => {
-    let updatedEvents = [...events, newEvent]
+     let updatedEvents = [...events, newEvent]
     setEvents(updatedEvents)
   }
 

@@ -118,7 +118,7 @@ function SigninForm({ setUser }) {
             </div>
             <div>
               <button type="submit" className="signout-button margin-center">
-                {isLoading ? "Loading..." : "Sign Up"}
+                {isLoading ? "Loading..." : "Signup"}
               </button>
             </div>
             <div>

@@ -13,8 +13,8 @@ User.create!([
         name: "Amie Foster ", 
         username: "afoster", 
         password: "password", 
-        image: "Image", 
-        bio: "Bio"
+        image: "https://media-exp1.licdn.com/dms/image/C5603AQHPJYz2Vn6kzg/profile-displayphoto-shrink_800_800/0/1631314484075?e=1643846400&v=beta&t=XnxUvGuGxsHxW3AoYMH89PMhjejoIijQeEh9ve54eIs", 
+        bio: "I'm Amie! I love true crime and code! Cant wait to make some planz!"
     }, 
     {
         name: "Ashley Doan", 

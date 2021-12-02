@@ -23,7 +23,6 @@ function Dashboard({ user, setUser }) {
     if (!!eventsArray) {
         const filteredEvents = eventsArray.filter((event) => event.user.id == user.id)
         setEvents(filteredEvents)
-        console.log(filteredEvents)
       }
   };
 

@@ -28,7 +28,7 @@ function LoginPage({ setUser = () => console.log('') }) {
                 <p className="login-box-switch text-center">
                   Don't have an account? &nbsp;
                   <button className="login-button-switch signout-button" onClick={() => setShowLogin(false)}>
-                    Sign Up
+                    Signup
                   </button>
                 </p>
               </>
@@ -39,7 +39,7 @@ function LoginPage({ setUser = () => console.log('') }) {
                 <p className="login-box-switch text-center">
                   Already have an account? &nbsp;
                   <button className="login-button-switch signout-button" onClick={() => setShowLogin(true)}>
-                    Log In
+                    Login
                   </button>
                 </p>
               </>

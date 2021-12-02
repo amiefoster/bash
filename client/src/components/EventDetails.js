@@ -33,6 +33,16 @@ function EventDetails({user}) {
        }
   };
 
+  const getExpenseTotal = () => {
+    if (!!details) {
+          let total = 0
+          details.expenses.map(expense => {
+            total = total + expense.amount
+          })
+          return total     
+    }
+  }
+
     const toggleGuestForm = () => {
     setGuestForm(!guestForm)
     }
@@ -53,8 +63,8 @@ function EventDetails({user}) {
     <div>         
         { details &&
         <div className="row column-container">
-            <div className="col-md-3 column-left">
-                <div className="details-left">
+            <div className="col-md-4 event-details-left">
+                <div className="">
                     <h1>{details.name}</h1>
                 </div>
                 <div>
@@ -76,7 +86,7 @@ function EventDetails({user}) {
                 {expenseForm && <ExpenseForm toggleExpenseForm={toggleExpenseForm} id={eventId} user={user} />}
                 {transportationForm && <TransportationForm toggleTransportationForm={toggleTransportationForm} id={eventId} user={user}/>}
                 {accommodationForm && <AccommodationForm toggleAccommodationForm={toggleAccommodationForm} id={eventId} user={user}/>}
-                {guestForm && <GuestForm toggleGuestForm={toggleGuestForm} id={eventId} user={user}/>}
+                {guestForm && <GuestForm className="modal-form-shadow" toggleGuestForm={toggleGuestForm} id={eventId} user={user}/>}
                 
                 <div className="card details-card" style={{width: "15rem"}}>
                     <div className="card-header guest-header-bg">
@@ -104,7 +114,9 @@ function EventDetails({user}) {
                         Expenses <img src={Add} alt="add button" className="add-details-button" onClick={toggleExpenseForm}/>
                     </div>
                     {details.expenses.map(expense => <li key={expense.id} className="list-group-item" style={{backgroundColor: "#cbfcfb"}}>{expense.name} - {expense.details} - ${expense.amount}</li>)}
+                    <div className="list-group-item">Total: ${getExpenseTotal()}</div>
                 </div>
+
 
                 <div className="card details-card list-header-bg" style={{width: "15rem"}}>
                     <div className="card-header">
@@ -115,9 +127,9 @@ function EventDetails({user}) {
 
             </div>
 
-            <div className="col-md-3 column-right">
+            <div className="col-md-4 column-right">
                 <div>
-                    <p>Activities {details.activities.map(activity => <li key={activity.id} >{activity.name} - {activity.description}</li>)}</p>
+                    <div> <h1>Activities</h1> {details.activities.map(activity => <li key={activity.id} >{activity.name} - {activity.description}</li>)}</div>
                 </div>
             </div>
 

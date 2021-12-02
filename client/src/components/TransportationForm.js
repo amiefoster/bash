@@ -45,12 +45,12 @@ function TransportationForm( { toggleTransportationForm, id, user } ) {
     return (
         <div className="modal-form">
            <div onClick={toggleTransportationForm} className="overlay"></div>
-                <div className="modal-form-content">
+                <div className="modal-form-content" style={{backgroundColor: "#ffdec0"}} >
 
-                    <h3>Add Transportation</h3>
+                    <h3 style={{backgroundColor: "#ffdec0"}}>Add Transportation</h3>
 
                         <form className="new-event-form" onSubmit={console.log("submit")}>
-                            <div className="new-event-text-field">
+                            <div className="new-event-text-field" style={{backgroundColor: "#ffdec0"}}>
                                 <label htmlFor="mode"></label>
                                 <input  
                                     className="event-form-text"
@@ -62,7 +62,7 @@ function TransportationForm( { toggleTransportationForm, id, user } ) {
                                     onChange={handleChange}
                                     />
                             </div>
-                            <div className="new-event-text-field">
+                            <div className="new-event-text-field" style={{backgroundColor: "#ffdec0"}}>
                                 <label htmlFor="date"></label>
                                 <input  
                                     className="event-form-text"
@@ -74,7 +74,7 @@ function TransportationForm( { toggleTransportationForm, id, user } ) {
                                     onChange={handleChange}
                                     />
                             </div>
-                            <div className="new-event-text-field">
+                            <div className="new-event-text-field" style={{backgroundColor: "#ffdec0"}}>
                                 <label htmlFor="details"></label>
                                 <input  
                                     className="event-form-text"
@@ -87,8 +87,8 @@ function TransportationForm( { toggleTransportationForm, id, user } ) {
                                     />
                             </div>
                             
-                            <div>
-                                <button className="new-event-button" type="submit" onClick={console.log("refresh")} >Done</button>
+                            <div style={{backgroundColor: "#ffdec0"}}>
+                                <button className="new-detail-button" type="submit" onClick={console.log("refresh")} >Done</button>
                             </div>
                         </form>                            
 

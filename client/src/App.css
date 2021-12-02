@@ -57,12 +57,11 @@
   text-align: center;
   justify-content: center;
   padding-top: 50px;
-  padding-left: 0px;
-  padding-right: 0px;
-
 }
 
-.column-left{
+
+/* BORDERS FOR DETAILS COLUMNS
+ .column-left{
   border: solid 1px;
 }
 
@@ -72,7 +71,7 @@
 
 .column-right{
   border: solid 1px;
-}
+} */
 
 /* SIGN IN/UP FORMS */
 .login-form{
@@ -185,6 +184,26 @@
   border: solid 1px
 }
 
+.event-details-left{
+  max-height: 250px;
+  max-width: 250px;
+}
+
+/* DETAIL FORMS */
+.new-detail-button{
+  border: solid 1px black;
+  margin: 15px;
+  background-color: #fff2fb;
+  padding: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  
+}
+.new-detail-button:hover{
+  color: white;
+  background-color: black;
+}
+
 /* DETAILS CARD COLOR */
 .guest-header-bg{
   background-color: #ff7ad8!important
@@ -229,6 +248,18 @@
   border-radius: 10px;
   max-width: 600px;
   min-width: 300px;
+  box-shadow: 1px 10px 20px 15px rgba(49,49,49,.8);
+  border: 1px black solid;
+}
+
+/* PROFILE */
+.profile-image {
+  border-radius: 1000px;
+  border: 2px solid #010101;
+  height: 210px;
+  width: 210px;
+  display: block;
+  margin: 0px auto;
 }
 
 

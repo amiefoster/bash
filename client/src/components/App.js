@@ -23,7 +23,7 @@ function App() {
   // const checkIfUserExists = (loggedInUser) => {
   //   if (!!user) {setUser(loggedInUser)}
   // }
-  console.log(user)
+  console.log(user);
 
   if (!user) return <LoginPage setUser={setUser} />;
 
@@ -32,12 +32,24 @@ function App() {
       <HomeNav user={user} setUser={setUser} />
 
       <Routes>
-        <Route exact path="/" element={<Dashboard user={user} setUser={setUser} />} />
-        <Route exact path="/profile" element={<Profile user={user} setUser={setUser} />} />
-        <Route exact path="/events/:eventId" element={<EventDetails user={user} />} />
+        <Route
+          exact
+          path="/"
+          element={<Dashboard user={user} setUser={setUser} />}
+        />
+        <Route
+          exact
+          path="/profile"
+          element={<Profile user={user} setUser={setUser} />}
+        />
+        <Route
+          exact
+          path="/events/:eventId"
+          element={<EventDetails user={user} />}
+        />
         {/* <Route exact path="/events/:eventId/details" element={<EventDetails user = {user} />} /> */}
-
       </Routes>
+
     </div>
   );
 }
@@ -45,18 +57,18 @@ function App() {
 export default App;
 
 //This will hold user state
-  //if (!user) return <Homepage setUser={setUser} />;
-    //otherwise if there is a user it will go to <Dashboard/>
-      //will hold Navbar for if there is a user logged in
-      //Will have links for
-        //Home
-        //Dashboard
-        //Profile
-    //this is where it will dynamically route to show all the users <Events/>
-
+//if (!user) return <Homepage setUser={setUser} />;
+//otherwise if there is a user it will go to <Dashboard/>
+//will hold Navbar for if there is a user logged in
+//Will have links for
+//Home
+//Dashboard
+//Profile
+//this is where it will dynamically route to show all the users <Events/>
 
 //BOOTSTRAP GRID
-{/* <div class="container">
+{
+  /* <div class="container">
   <div class="row justify-content-center header-container">
     <div class="col-sm-6 header-left">LOGO goes here</div>
     <div class="col-sm-6 header-right">Nav Links go here</div>
@@ -73,4 +85,5 @@ export default App;
       <h1>Div 3</h1>
     </div>
   </div>
-</div>; */}
+</div>; */
+}

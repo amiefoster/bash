@@ -31,12 +31,16 @@
   padding-top: 50px;
   padding-bottom: 50px;
   padding-left: 20px;
+  padding-right: 20px;
+
 }
 
 .header-left{
   /* border: solid 1px; */
   text-align: left;
   justify-content: left;
+  border-bottom: solid 2px rgba(49,49,49);
+ 
 }
 
 .header-right{
@@ -44,6 +48,8 @@
   /* border: solid 1px; */
   text-align: right;
   justify-content: right;
+  border-bottom: solid 2px rgba(49,49,49);
+  
 }
 
 /* HOMEPAGE */
@@ -51,6 +57,15 @@
   border: solid 1px;
   text-align: center;
   justify-content: center;
+}
+
+.dashboard-title{
+  justify-content: right;
+  text-align: left; 
+  font-size: 22px;
+  border-radius: 4px;
+  border-bottom: solid black 1px;
+  
 }
 
 /* BODY COLUMNS */
@@ -98,12 +113,15 @@
 .login-text{
   height: 40px;
   width: 300px;
-  border: solid black 1px;
+  border-bottom: solid black 1px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
   background: none;
 
 }
 .login-text:hover{
-  border: solid black 2px;
+  border: solid black 1px;
 }
 
 .signup-form{
@@ -122,7 +140,7 @@
   margin: 25px;
   text-align: left;
   justify-content: left;
-  box-shadow: 0px 20px 40px 15px rgba(49, 16, 41, 0.05);
+  box-shadow: 0 4px 6px 0 hsl(0deg 0% 0% / 20%);
   overflow: hidden;
 }
 
@@ -190,6 +208,7 @@
   margin: 10px; 
   max-height: fit-content!important; 
   text-align: left;
+  box-shadow: 0 4px 6px 0 hsl(0deg 0% 0% / 35%);
 }
 
 .details-header-left{
@@ -235,12 +254,18 @@
 .event-form-text{
   height: 40px;
   width: 300px;
-  border: solid black 1px;
+  border-bottom: solid black 1px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: none;
+
   
 }
 
 .event-form-text:hover{
-  border: solid black 2px;
+  border: solid black 1px;
+  
 }
 
 .new-event-text-field{
@@ -259,6 +284,8 @@
 .details-name{
  background: #ae79fa;
  box-shadow: 0 4px 6px 0 hsl(0deg 0% 0% / 20%);
+ color: white;
+ border-radius: 4px;
 }
 .details-name h1{
   background: none;
@@ -272,6 +299,7 @@
   background: #ae79fa;
   box-shadow: 0 4px 6px 0 hsl(0deg 0% 0% / 20%);
   border-radius: 4px;
+  color: white;
   
 }
 
@@ -282,10 +310,21 @@
   opacity: .5;
 }
 
-.list-group-item > .details-delete-btn:hover{
+.details-delete-btn{
+  margin: 0 auto;
+}
+
+.list-group-item  .details-delete-btn{
   background: none;
-  transform: scale(.8);
+  justify-self: right;  
+  visibility: hidden;
+  transform: scale(.6);
   opacity: .8;
+}
+
+.list-group-item:hover .details-delete-btn{
+  visibility: visible;
+  transform: scale(.8);
 }
 
 /* DETAILS CARD COLOR */
@@ -332,7 +371,7 @@
   border-radius: 10px;
   max-width: 600px;
   min-width: 300px;
-  box-shadow: 1px 10px 20px 15px rgba(49,49,49,.8);
+  box-shadow: 0 4px 6px 0 hsl(0deg 0% 0% / 20%);
   border: 1px black solid;
 }
 
@@ -364,6 +403,20 @@
 /* TIMELINE */
 
 .activity-card > *{
+  background: none;
+}
+
+.footer{
+  text-align: center; 
+  position:fixed;
+  bottom:0;
+  width:100%;
+  color: black;
+  height:40px;   /* Height of the footer */
+  border-radius: 4px;
+}
+
+.background-none{
   background: none;
 }
 

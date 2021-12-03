@@ -1,50 +1,48 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 function SigninForm({ setUser }) {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+  const [bio, setBio] = useState("");
+  const [name, setName] = useState("");
+  const [errors, setErrors] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const [passwordConfirmation, setPasswordConfirmation] = useState("");
-    const [imageUrl, setImageUrl] = useState("");
-    const [bio, setBio] = useState("");
-    const [name, setName] = useState("");
-    const [errors, setErrors] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setErrors([]);
-        setIsLoading(true);
-        fetch("/signup", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            name,
-            username,
-            password,
-            password_confirmation: passwordConfirmation,
-            image_url: imageUrl,
-            bio,
-        }),
-        }).then((r) => {
-        setIsLoading(false);
-        if (r.ok) {
-            r.json().then((user) => setUser(user) && console.log(user));
-        } else {
-            r.json().then((err) => setErrors(err.errors));
-        }
-        });
-    };
-    console.log(errors)
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setErrors([]);
+    setIsLoading(true);
+    fetch("/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        username,
+        password,
+        password_confirmation: passwordConfirmation,
+        image_url: imageUrl,
+        bio,
+      }),
+    }).then((r) => {
+      setIsLoading(false);
+      if (r.ok) {
+        r.json().then((user) => setUser(user) && console.log(user));
+      } else {
+        r.json().then((err) => setErrors(err.errors));
+      }
+    });
+  };
+  console.log(errors);
 
   return (
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-sm-6 signup-form">
-          <h1>This is the SignupForm!</h1>
-
+          
           <form onSubmit={(e) => handleSubmit(e)} className="login-box">
             <div className="login-text-field">
               <label htmlFor="name"></label>

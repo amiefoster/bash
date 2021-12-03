@@ -219,26 +219,36 @@ Activity.create!([
     {
         name: "Hot Springs", 
         description: "Lets go take a dip in some natural hot springs!", 
+        date: "09/04/2021", 
+        time: "10 am",
         event_id: "1", 
     }, 
     {
         name: "Horseback Ride", 
         description: "Sunset horseback ride around Horseshoe lake!", 
+        date: "09/03/2021", 
+        time: "6 pm",
         event_id: "1", 
     }, 
     {
         name: "Spa", 
         description: "Private spa choose from facial or massage and wind down with the sauna!", 
+        date: "03/04/2021", 
+        time: "10 am",
         event_id: "2", 
     }, 
     {
         name: "Wine tasting", 
         description: "Private tour of infamous Andretti Windery.Lunch and tastings included in tour.", 
+        date: "01/05/2022", 
+        time: "11 am",
         event_id: "3", 
     }, 
     {
         name: "Dinner", 
         description: "Dinner at infamous Michelin Star restaurant, French Laundry.", 
+        date: "01/06/2022", 
+        time: "06 pm",
         event_id: "3", 
     }
 ])
@@ -247,28 +257,28 @@ puts "Seeding expenses..."
 Expense.create!([
     {
         name: "Horseback Ride", 
-        details: "", 
+        details: "Amie paid for all tickets", 
         amount: 250.00, 
         guest_id: 1, 
         event_id: 1
     }, 
     {
         name: "Dinner", 
-        details: "", 
+        details: "Amie paid for dinner!", 
         amount: 300.00, 
         guest_id: "5", 
         event_id: "2"
     }, 
     {
         name: "Ubers", 
-        details: "", 
+        details: "Carrie paid for ubers", 
         amount: 100.00, 
         guest_id: 5, 
         event_id: 2
     }, 
     {
         name: "Airbnb", 
-        details: "", 
+        details: "Jon Snow paid for air bnb", 
         amount: 2000.00, 
         guest_id: 9, 
         event_id: 3

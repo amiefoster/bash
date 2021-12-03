@@ -34,12 +34,12 @@ function PackingListForm( { togglePackingListForm, id } ) {
     return (
         <div className="modal-form">
            <div onClick={togglePackingListForm} className="overlay"></div>
-                <div className="modal-form-content" style={{backgroundColor: "#e7dafa"}}>
+                <div className="modal-form-content" style={{backgroundColor: "#fcdfdf"}}>
 
-                <h3 style={{backgroundColor: "#e7dafa"}}>Add Transportation</h3>
+                <h3 style={{backgroundColor: "#fcdfdf"}}>Add Item</h3>
 
                 <form className="new-event-form" onSubmit={handleSubmit}>
-                    <div className="new-event-text-field" style={{backgroundColor: "#e7dafa"}}>
+                    <div className="new-event-text-field" style={{backgroundColor: "#fcdfdf"}}>
                         <label htmlFor="item"></label>
                         <input  
                             className="event-form-text"
@@ -52,7 +52,7 @@ function PackingListForm( { togglePackingListForm, id } ) {
                             />
                     </div>
                     
-                    <div style={{backgroundColor: "#e7dafa"}}>
+                    <div style={{backgroundColor: "#fcdfdf"}}>
                         <button className="new-detail-button" type="submit" >Done</button>
                     </div>
                 </form>                            

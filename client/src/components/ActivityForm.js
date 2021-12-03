@@ -39,7 +39,7 @@ function ActivityForm( { toggleActivityForm, id } ) {
     return (
         <div className="modal-form">
            <div onClick={toggleActivityForm} className="overlay"></div>
-                <div className="modal-form-content">
+                <div className="modal-form-content" style={{backgroundColor: "#e7dafa"}}>
 
                     <h3 style={{backgroundColor: "#e7dafa"}}>Add Activity</h3>
 

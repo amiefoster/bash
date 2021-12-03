@@ -9,6 +9,7 @@ import ExpenseForm from "./ExpenseForm";
 import PackingListForm from './PackingListForm'
 import ActivityForm from "./ActivityForm";
 import TimelineContainer from "./TimelineContainer";
+import Close from '../images/remove.png'
 
 function EventDetails({user}) {
   const { eventId } = useParams();
@@ -22,7 +23,7 @@ function EventDetails({user}) {
   
   useEffect(() => {
     getDetails();
-  }, [eventId, guestForm, accommodationForm, transportationForm, expenseForm, packingListForm, activityForm]);
+  }, [eventId, guestForm, accommodationForm, transportationForm, expenseForm, packingListForm, activityForm, user]);
 
   const getDetails = () => {
     fetch(`/events/${eventId}`)
@@ -70,20 +71,22 @@ function EventDetails({user}) {
         { details &&
         <div className="row column-container">
             <div className="col-md-4 event-details-left">
-                <div className="">
-                    <h1>{details.name}</h1>
-                </div>
-                <div>
-                    <p>{details.description}</p>
-                </div>
-                <div>
-                    <p>Hosted by, {details.user.name}</p>
-                </div>
-                <div>
-                    <p>{details.date}</p>
-                </div>
-                <div>
-                    <p>{details.location}</p>
+                <div className="basic-info-card">
+                    <div className="details-name">
+                        <h1>{details.name}</h1>
+                    </div>
+                    <div>
+                        <p className="details-description">{details.description}</p>
+                    </div>
+                    <div>
+                        <p>Hosted by, {details.user.name}</p>
+                    </div>
+                    <div>
+                        <p>{details.date}</p>
+                    </div>
+                    <div>
+                        <p>{details.location}</p>
+                    </div>
                 </div>
             </div>
 
@@ -94,32 +97,33 @@ function EventDetails({user}) {
                 {accommodationForm && <AccommodationForm toggleAccommodationForm={toggleAccommodationForm} id={eventId} user={user}/>}
                 {guestForm && <GuestForm className="modal-form-shadow" toggleGuestForm={toggleGuestForm} id={eventId} user={user}/>}
                 {activityForm && <ActivityForm className="modal-form-shadow" toggleActivityForm={toggleActivityForm} id={eventId} user={user}/>}
-                <div className="card details-card" style={{width: "15rem"}}>
-                    <div className="card-header guest-header-bg">
+                
+                <div className="card details-card guest-header-bg" style={{width: "15rem"}}>
+                    <div className="card-header" >
                         Guests <img src={Add} alt="add button" className="add-details-button" onClick={toggleGuestForm}/>
                     </div>
-                        {!!details && details.guests.map(guest => <li key={guest.id} className="list-group-item" style={{backgroundColor: "#fdddf4"}}>{guest.user.name}</li>)}
+                        {details.guests.map(guest => <li key={guest.id} className="list-group-item" style={{backgroundColor: "#fdddf4"}}><img src={Close} className="details-delete-btn" onClick={console.log("delete btn")}/>{guest.user.name} </li> )}
                 </div>
                
                 <div className="card details-card accommodation-header-bg" style={{width: "15rem"}}>
                     <div className="card-header">
                         Accommodations <img src={Add} alt="add button" className="add-details-button" onClick={toggleAccommodationForm}/>
                     </div>
-                    {details.accommodations.map(stay => <li key={stay.id} className="list-group-item" style={{backgroundColor: "#c5ebd7"}}>{stay.name} - Located at: {stay.address}</li>)}
+                    {details.accommodations.map(stay => <li key={stay.id} className="list-group-item" style={{backgroundColor: "#c5ebd7"}}><img src={Close} className="details-delete-btn" onClick={console.log("delete btn")}/>{stay.name} - Located at: {stay.address}</li>)}
                 </div>
 
                 <div className="card details-card transportation-header-bg" style={{width: "15rem"}}>
                     <div className="card-header">
                         Transportation <img src={Add} alt="add button" className="add-details-button" onClick={toggleTransportationForm}/>
                     </div>
-                    {details.transportations.map(transportation => <li key={transportation.id} className="list-group-item" style={{backgroundColor: "#ffdec0"}}>{transportation.mode} - {transportation.date} - {transportation.details}</li>)}
+                    {details.transportations.map(transportation => <li key={transportation.id} className="list-group-item" style={{backgroundColor: "#ffdec0"}}><img src={Close} className="details-delete-btn" onClick={console.log("delete btn")}/>{transportation.mode} - {transportation.date} - {transportation.details}</li>)}
                 </div>
 
                 <div className="card details-card expense-header-bg" style={{width: "15rem"}}>
                     <div className="card-header">
                         Expenses <img src={Add} alt="add button" className="add-details-button" onClick={toggleExpenseForm}/>
                     </div>
-                    {details.expenses.map(expense => <li key={expense.id} className="list-group-item" style={{backgroundColor: "#cbfcfb"}}>{expense.name} - {expense.details} - ${expense.amount}</li>)}
+                    {details.expenses.map(expense => <li key={expense.id} className="list-group-item" style={{backgroundColor: "#cbfcfb"}}><img src={Close} className="details-delete-btn" onClick={console.log("delete btn")}/>{expense.name} - {expense.details} - ${expense.amount}</li>)}
                     <div className="list-group-item">Total: ${getExpenseTotal()}</div>
                 </div>
 
@@ -128,13 +132,16 @@ function EventDetails({user}) {
                     <div className="card-header">
                         Packing List <img src={Add} alt="add button" className="add-details-button" onClick={togglePackingListForm}/>
                     </div>
-                    {details.packing_lists.map(item => <li key={item.id} className="list-group-item" style={{backgroundColor: "#e7dafa"}}>{item.item}</li>)}
+                    {details.packing_lists.map(item => <li key={item.id} className="list-group-item" style={{backgroundColor: "#fcdfdf"}}><img src={Close} className="details-delete-btn" onClick={console.log("delete btn")}/>{item.item}</li>)}
                 </div>
 
             </div>
 
-            <div className="col-md-4 column-right">
-                <h1>Itinerary <img src={Add} alt="add button" className="add-details-button" onClick={toggleActivityForm}/> </h1>
+            <div className="col-md-4 intnerary-column-right">
+                <div className="activity-header">
+                <h1 className="activity-header">Itinerary <img src={Add}    alt="add button" className="add-details-button" onClick={toggleActivityForm}/> 
+                </h1>
+                </div>
                 <div> 
                     {details.activities.map(activity => <TimelineContainer activity={activity} />)}
                 </div>

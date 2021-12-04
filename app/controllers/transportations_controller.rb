@@ -10,6 +10,12 @@ class TransportationsController < ApplicationController
         render json: Transportation.all
     end
 
+    def destroy
+        transportation = Transportation.find(params[:id])
+        transportation.destroy
+        head :no_content
+    end
+
     private
 
     def transportation_params

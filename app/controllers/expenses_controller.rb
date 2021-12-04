@@ -9,6 +9,12 @@ class ExpensesController < ApplicationController
     def index
         render json: Expense.all
     end
+    
+    def destroy
+        expense = Expense.find(params[:id])
+        expense.destroy
+        head :no_content
+    end
 
     private
 

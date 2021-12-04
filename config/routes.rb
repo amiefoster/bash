@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :packing_lists, only: [:index, :show, :create, :destroy]
   resources :expenses, only: [:index, :show, :create, :destroy]
-  resources :activities, only: [:index, :show, :create]
+  resources :activities, only: [:index, :show, :create, :destroy]
   resources :transportations, only: [:index, :show, :create, :destroy]
   resources :accommodations, only: [:index, :show, :create, :destroy]
   

@@ -6,6 +6,12 @@ class PackingListsController < ApplicationController
 
     end
 
+    def destroy
+        packingList = PackingList.find(params[:id])
+        packingList.destroy
+        head :no_content
+    end
+
     private
 
     def packing_params

@@ -21,6 +21,7 @@ function EventDetails({ user }) {
   const [expenseForm, setExpenseForm] = useState(false);
   const [packingListForm, setPackingListForm] = useState(false);
   const [activityForm, setActivityForm] = useState(false);
+  const [reload, setReload] = useState(false)
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -33,6 +34,7 @@ function EventDetails({ user }) {
     expenseForm,
     packingListForm,
     activityForm,
+    reload,
     user,
   ]);
 
@@ -77,11 +79,39 @@ function EventDetails({ user }) {
     setActivityForm(!activityForm);
   };
 
-  const handleDelete = (id) => {
+  const handleGuestDelete = (id) => {
     fetch(`/guests/${id}`, {
       method: "DELETE", 
     })
-    .then(navigate(`/events/${eventId}`))
+    .then(setReload(!reload))
+  }
+
+  const handleAccommodationDelete = (id) => {
+    fetch(`/accommodations/${id}`, {
+      method: "DELETE", 
+    })
+    .then(setReload(!reload))
+  }
+
+  const handleTransportationDelete = (id) => {
+    fetch(`/transportations/${id}`, {
+      method: "DELETE", 
+    })
+    .then(setReload(!reload))
+  }
+
+  const handleExpenseDelete = (id) => {
+    fetch(`/expenses/${id}`, {
+      method: "DELETE", 
+    })
+    .then(setReload(!reload))
+  }
+
+  const handlePackingListDelete = (id) => {
+    fetch(`/packing_lists/${id}`, {
+      method: "DELETE", 
+    })
+    .then(setReload(!reload))
   }
 
   return (
@@ -180,7 +210,7 @@ function EventDetails({ user }) {
                     src={Close}
                     id={guest.id}
                     className="details-delete-btn"
-                    onClick={() => handleDelete(guest.id)}
+                    onClick={() => handleGuestDelete(guest.id)}
                   />
                 </li>
               ))}
@@ -208,8 +238,9 @@ function EventDetails({ user }) {
                   {stay.name} - Located at: {stay.address}
                   <img
                     src={Close}
+                    id={stay.id}
                     className="details-delete-btn"
-                    onClick={console.log("delete btn")}
+                    onClick={() => handleAccommodationDelete(stay.id)}
                   />
                 </li>
               ))}
@@ -239,7 +270,7 @@ function EventDetails({ user }) {
                   <img
                     src={Close}
                     className="details-delete-btn"
-                    onClick={console.log("delete btn")}
+                    onClick={() => handleTransportationDelete(transportation.id)}
                   />
                 </li>
               ))}
@@ -268,7 +299,7 @@ function EventDetails({ user }) {
                   <img
                     src={Close}
                     className="details-delete-btn"
-                    onClick={console.log("delete btn")}
+                    onClick={() => handleExpenseDelete(expense.id)}
                   />
                 </li>
               ))}
@@ -298,7 +329,7 @@ function EventDetails({ user }) {
                   <img
                     src={Close}
                     className="details-delete-btn"
-                    onClick={console.log("delete btn")}
+                    onClick={() => handlePackingListDelete(item.id)}
                   />
                 </li>
               ))}
@@ -319,7 +350,7 @@ function EventDetails({ user }) {
             </div>
             <div>
               {details.orderedActivities.map((activity) => (
-                <TimelineContainer activity={activity} />
+                <TimelineContainer reload={reload} setReload={setReload} activity={activity} />
               ))}
             </div>
           </div>

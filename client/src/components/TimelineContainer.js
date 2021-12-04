@@ -5,6 +5,7 @@ import {
   themes,
   createTheme,
 } from "@merc/react-timeline";
+import { useState } from 'react';
 import Remove from "../images/remove.png";
 
 const customTheme = createTheme(themes.default, {
@@ -23,12 +24,18 @@ const customTheme = createTheme(themes.default, {
   },
 });
 
-function TimelineContainer({ activity }) {
-  console.log(activity);
+function TimelineContainer({ activity, reload, setReload }) {
 
   const opts = {
     layout: "inline-evts-inline-date",
   };
+
+  const handleActivityDelete = (id) => {
+    fetch(`/activities/${id}`, {
+      method: "DELETE", 
+    })
+    .then(setReload(!reload))
+  }
 
   return (
     <div className="" style={{ paddingLeft: "none" }}>
@@ -46,7 +53,7 @@ function TimelineContainer({ activity }) {
               <img
                 src={Remove}
                 className="details-delete-btn"
-                onClick={console.log("delete btn")}
+                onClick={() => handleActivityDelete(activity.id)}
               />
             </div>
           </TextEvent>

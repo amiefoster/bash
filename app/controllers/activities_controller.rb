@@ -11,6 +11,12 @@ class ActivitiesController < ApplicationController
         render json: activities
     end
 
+    def destroy
+        activity = Activity.find(params[:id])
+        activity.destroy
+        head :no_content
+    end
+
     private
 
     def activity_params

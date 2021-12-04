@@ -5,6 +5,7 @@ import {
   themes,
   createTheme,
 } from "@merc/react-timeline";
+import Remove from "../images/remove.png";
 
 const customTheme = createTheme(themes.default, {
   card: {
@@ -23,11 +24,7 @@ const customTheme = createTheme(themes.default, {
 });
 
 function TimelineContainer({ activity }) {
-  {
-    /* <p>{activity.name}</p>
-        <p>Date: {activity.date} Time: {activity.time}</p>
-        <p>{activity.description}</p> */
-  }
+  console.log(activity);
 
   const opts = {
     layout: "inline-evts-inline-date",
@@ -46,9 +43,11 @@ function TimelineContainer({ activity }) {
             <p>{activity.description}</p>
 
             <div>
-              {/* <button className="new-detail-button" onClick={console.log("click")}>
-                                X
-                            </button> */}
+              <img
+                src={Remove}
+                className="details-delete-btn"
+                onClick={console.log("delete btn")}
+              />
             </div>
           </TextEvent>
         </Events>

@@ -1,13 +1,14 @@
 import { useState } from "react";
 
-function TransportationForm({ toggleTransportationForm, id, user }) {
+function TransportationForm({ toggleTransportationForm, id, user, guests }) {
   const [formData, setFormData] = useState({
     mode: "",
     date: "",
     details: "",
     event_id: "",
-    guest_id: "",
+    id: "",
   });
+  
 
   const handleChange = (event) => {
     setFormData({
@@ -28,7 +29,7 @@ function TransportationForm({ toggleTransportationForm, id, user }) {
         date: formData.date,
         details: formData.details,
         event_id: id,
-        guest_id: user.id,
+        guest_id: formData.id,
       }),
     })
       .then((response) => response.json())
@@ -37,6 +38,7 @@ function TransportationForm({ toggleTransportationForm, id, user }) {
         toggleTransportationForm();
       });
   };
+
 
   return (
     <div className="modal-form">
@@ -48,6 +50,29 @@ function TransportationForm({ toggleTransportationForm, id, user }) {
         <h3 style={{ backgroundColor: "#ffdec0" }}>Add Transportation</h3>
 
         <form className="new-event-form" onSubmit={handleSubmit}>
+          <div
+            className="new-event-text-field"
+            style={{ backgroundColor: "#ffdec0" }}
+          >
+            <label>
+              <select
+                className="event-form-text "
+                style={{ backgroundColor: "#ffdec0" }}
+                name="id"
+                value={formData.id}
+                onChange={handleChange}
+              >
+                <option value="">Choose A Guest</option>
+                {guests &&
+                  guests.map((guest) => (
+                    <option key={guest.id} value={guest.id}>
+                      {guest.user.name}
+                    </option>
+                  ))}
+              </select>
+            </label>            
+          </div>
+          
           <div
             className="new-event-text-field"
             style={{ backgroundColor: "#ffdec0" }}

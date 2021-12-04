@@ -26,7 +26,7 @@ function ActivityForm({ toggleActivityForm, id }) {
       body: JSON.stringify({
         name: formData.name,
         description: formData.description,
-        date: formData.name,
+        date: formData.date,
         time: formData.time,
         event_id: id,
       }),

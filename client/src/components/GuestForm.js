@@ -66,6 +66,7 @@ function GuestForm({ toggleGuestForm, id, user }) {
                 name="id"
                 value={formData.id}
                 onChange={handleChange}
+                style={{ backgroundColor: "#fdddf4" }}
               >
                 <option value="">Choose A Guest</option>
                 {guests &&

@@ -28,7 +28,6 @@ function LoginForm({ setUser = () => console.log("") }) {
       }
     });
   };
-  console.log(errors);
 
   return (
     <div className="container">

@@ -1,11 +1,12 @@
 import { useState } from "react";
 
-function ExpenseForm({ toggleExpenseForm, id, user }) {
+function ExpenseForm({ toggleExpenseForm, id, user, guests}) {
   const [formData, setFormData] = useState({
     name: "",
     details: "",
     amount: "",
     event_id: "",
+    id: "",
   });
 
   const handleChange = (event) => {
@@ -13,7 +14,6 @@ function ExpenseForm({ toggleExpenseForm, id, user }) {
       ...formData,
       [event.target.name]: event.target.value,
     });
-    console.log(formData);
   };
 
   const handleSubmit = (event) => {
@@ -28,7 +28,7 @@ function ExpenseForm({ toggleExpenseForm, id, user }) {
         details: formData.details,
         amount: formData.amount,
         event_id: id,
-        guest_id: user.id,
+        guest_id: formData.id,
       }),
     })
       .then((response) => response.json())
@@ -48,6 +48,29 @@ function ExpenseForm({ toggleExpenseForm, id, user }) {
         <h3 style={{ backgroundColor: "#cbfcfb" }}>Add New Expense</h3>
 
         <form className="new-event-form" onSubmit={handleSubmit}>
+        <div
+            className="new-event-text-field"
+            style={{ backgroundColor: "#cbfcfb" }}
+          >
+            <label>
+              <select
+                className="event-form-text "
+                style={{ backgroundColor: "#cbfcfb" }}
+                name="id"
+                value={formData.id}
+                onChange={handleChange}
+              >
+                <option value="">Choose A Guest</option>
+                {guests &&
+                  guests.map((guest) => (
+                    <option key={guest.id} value={guest.id}>
+                      {guest.user.name}
+                    </option>
+                  ))}
+              </select>
+            </label>            
+          </div>
+
           <div
             className="new-event-text-field"
             style={{ backgroundColor: "#cbfcfb" }}

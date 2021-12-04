@@ -36,7 +36,6 @@ function SigninForm({ setUser }) {
       }
     });
   };
-  console.log(errors);
 
   return (
     <div className="container">

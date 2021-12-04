@@ -9,6 +9,11 @@ class GuestsController < ApplicationController
         render json: new_guest
     end
 
+    def destroy
+        guest = Guest.find(params[:id])
+        guest.destroy
+    end
+
     private
 
     def guest_params

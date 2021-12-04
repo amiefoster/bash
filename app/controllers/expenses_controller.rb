@@ -6,6 +6,10 @@ class ExpensesController < ApplicationController
 
     end
 
+    def index
+        render json: Expense.all
+    end
+
     private
 
     #not sure if i should include GUEST_id or USER_id

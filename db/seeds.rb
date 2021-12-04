@@ -257,28 +257,28 @@ puts "Seeding expenses..."
 Expense.create!([
     {
         name: "Horseback Ride", 
-        details: "Amie paid for all tickets", 
+        details: "Paid for all tickets", 
         amount: 250.00, 
         guest_id: 1, 
         event_id: 1
     }, 
     {
         name: "Dinner", 
-        details: "Amie paid for dinner!", 
+        details: "Paid for dinner!", 
         amount: 300.00, 
         guest_id: "5", 
         event_id: "2"
     }, 
     {
         name: "Ubers", 
-        details: "Carrie paid for ubers", 
+        details: "Paid for ubers", 
         amount: 100.00, 
         guest_id: 5, 
         event_id: 2
     }, 
     {
         name: "Airbnb", 
-        details: "Jon Snow paid for air bnb", 
+        details: "Paid for air bnb", 
         amount: 2000.00, 
         guest_id: 9, 
         event_id: 3

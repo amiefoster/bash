@@ -65,3 +65,7 @@ export default Dashboard;
 //The form will be a modal
 //This will make a POST request and add new information to the dashboard
 //There will also be an "add event" button which will add a new event card to the dash
+
+
+
+//also fetch to /guests and see if the user id exists and add those events to the filtered events

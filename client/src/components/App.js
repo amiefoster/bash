@@ -68,10 +68,10 @@ export default App;
 
 //BOOTSTRAP GRID
 {
-  /* <div class="container">
-  <div class="row justify-content-center header-container">
-    <div class="col-sm-6 header-left">LOGO goes here</div>
-    <div class="col-sm-6 header-right">Nav Links go here</div>
+  /* <div className="container">
+  <div className="row justify-content-center header-container">
+    <div className="col-sm-6 header-left">LOGO goes here</div>
+    <div className="col-sm-6 header-right">Nav Links go here</div>
   </div>
 
   <div className="row column-container">

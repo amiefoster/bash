@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-//import { useParams } from 'react-router-dom';
 import Add from "../images/small-add.png";
 import GuestForm from "./GuestForm";
 import AccommodationForm from "./AccommodationForm";
@@ -10,6 +9,8 @@ import PackingListForm from "./PackingListForm";
 import ActivityForm from "./ActivityForm";
 import TimelineContainer from "./TimelineContainer";
 import Close from "../images/remove.png";
+import { useNavigate } from 'react-router-dom';
+
 
 function EventDetails({ user }) {
   const { eventId } = useParams();
@@ -20,6 +21,7 @@ function EventDetails({ user }) {
   const [expenseForm, setExpenseForm] = useState(false);
   const [packingListForm, setPackingListForm] = useState(false);
   const [activityForm, setActivityForm] = useState(false);
+  let navigate = useNavigate();
 
   useEffect(() => {
     getDetails();
@@ -75,6 +77,13 @@ function EventDetails({ user }) {
     setActivityForm(!activityForm);
   };
 
+  const handleDelete = (id) => {
+    fetch(`/guests/${id}`, {
+      method: "DELETE", 
+    })
+    .then(navigate(`/events/${eventId}`))
+  }
+
   return (
     <div>
       {details && (
@@ -112,6 +121,7 @@ function EventDetails({ user }) {
                 toggleExpenseForm={toggleExpenseForm}
                 id={eventId}
                 user={user}
+                guests={details.guests.map(guest=>guest)}
               />
             )}
             {transportationForm && (
@@ -119,6 +129,7 @@ function EventDetails({ user }) {
                 toggleTransportationForm={toggleTransportationForm}
                 id={eventId}
                 user={user}
+                guests={details.guests.map(guest=>guest)}
               />
             )}
             {accommodationForm && (
@@ -167,8 +178,9 @@ function EventDetails({ user }) {
                   {guest.user.name}{" "}
                   <img
                     src={Close}
+                    id={guest.id}
                     className="details-delete-btn"
-                    onClick={console.log("delete btn")}
+                    onClick={() => handleDelete(guest.id)}
                   />
                 </li>
               ))}
@@ -222,7 +234,7 @@ function EventDetails({ user }) {
                   className="list-group-item"
                   style={{ backgroundColor: "#ffdec0" }}
                 >
-                  {transportation.mode} - {transportation.date} -{" "}
+                  {transportation.nameOfUser} - {transportation.mode} - {transportation.date} -{" "}
                   {transportation.details}
                   <img
                     src={Close}
@@ -252,7 +264,7 @@ function EventDetails({ user }) {
                   className="list-group-item"
                   style={{ backgroundColor: "#cbfcfb" }}
                 >
-                  {expense.name} - {expense.details} - ${expense.amount}
+                  {expense.nameOfGuest} - {expense.name} - {expense.details} - ${expense.amount}
                   <img
                     src={Close}
                     className="details-delete-btn"
@@ -306,7 +318,7 @@ function EventDetails({ user }) {
               </h1>
             </div>
             <div>
-              {details.activities.map((activity) => (
+              {details.orderedActivities.map((activity) => (
                 <TimelineContainer activity={activity} />
               ))}
             </div>

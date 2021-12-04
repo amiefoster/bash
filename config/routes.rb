@@ -2,13 +2,13 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show]
   resources :events, except: [:update]
-  resources :guests, only: [:index, :show, :create]
+  resources :guests, only: [:index, :show, :create, :destroy]
 
-  resources :packing_lists, only: [:index, :show, :create]
-  resources :expenses, only: [:index, :show, :create]
+  resources :packing_lists, only: [:index, :show, :create, :destroy]
+  resources :expenses, only: [:index, :show, :create, :destroy]
   resources :activities, only: [:index, :show, :create]
-  resources :transportations, only: [:index, :show, :create]
-  resources :accommodations, only: [:index, :show, :create]
+  resources :transportations, only: [:index, :show, :create, :destroy]
+  resources :accommodations, only: [:index, :show, :create, :destroy]
   
 
   post "/signup", to: "users#create"

@@ -6,6 +6,11 @@ class ActivitiesController < ApplicationController
 
     end
 
+    def index
+        activities = Activity.all.order(:date)
+        render json: activities
+    end
+
     private
 
     def activity_params

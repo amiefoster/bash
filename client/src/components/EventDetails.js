@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Add from "../images/small-add.png";
+import { useNavigate } from 'react-router-dom';
 import GuestForm from "./GuestForm";
 import AccommodationForm from "./AccommodationForm";
 import TransportationForm from "./TransportationForm";
@@ -8,8 +8,8 @@ import ExpenseForm from "./ExpenseForm";
 import PackingListForm from "./PackingListForm";
 import ActivityForm from "./ActivityForm";
 import TimelineContainer from "./TimelineContainer";
+import Add from "../images/small-add.png";
 import Close from "../images/remove.png";
-import { useNavigate } from 'react-router-dom';
 
 
 function EventDetails({ user }) {
@@ -199,6 +199,12 @@ function EventDetails({ user }) {
                   onClick={toggleGuestForm}
                 />
               </div>
+                <li
+                    className="list-group-item"
+                    style={{ backgroundColor: "#fdddf4" }}
+                  >
+                    {user.name}{" "}
+                  </li>
               {details.guests.map((guest) => (
                 <li
                   key={guest.id}

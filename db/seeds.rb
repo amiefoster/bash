@@ -85,24 +85,24 @@ puts "🎉🎉🎉Seeding Events..."
 
 Event.create!([
     {
-        name: "Birthday Party", 
-        description: "Amies birthday party!", 
+        name: "Glamping", 
+        description: "Girls weekens GLAMPING!", 
         location: "Mammoth, Ca", 
-        date: "September 1-4", 
+        date: "09/01/2021 - 09/06/2021", 
         user_id: 1
     }, 
     {
         name: "Bachelorette Party", 
         description: "Charlottes bachelorette party!", 
         location: "Miami, Fl", 
-        date: "March 3-5", 
+        date: "03/03/2022 - 03/06/2022", 
         user_id: 5
     }, 
     {
         name: "Girls weekend!", 
         description: "Lets get the gals together for a fun weekend!", 
         location: "Napa, Ca", 
-        date: "Janurary 4-7", 
+        date: "01/04/2022 - 03/07/2022", 
         user_id: 9
     }
 ])

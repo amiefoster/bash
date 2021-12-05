@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import EventContainer from "./EventContainer";
-import Add from "../images/add.png";
 import EventForm from "./EventForm";
+import Add from "../images/add.png";
 
 function Dashboard({ user, setUser }) {
   const [events, setEvents] = useState([]);
@@ -9,7 +9,6 @@ function Dashboard({ user, setUser }) {
 
   const toggleForm = () => {
     setNewEventForm(!newEventForm);
-    console.log(newEventForm);
   };
 
   useEffect(() => {

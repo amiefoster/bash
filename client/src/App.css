@@ -9,6 +9,11 @@
   font-family: 'Ubuntu', sans-serif;
   background-color: #fff2fb;
 }
+.login-page {
+   min-height: 400px;
+   margin-bottom: 100px;
+   clear: both;
+}
 
 .nav-link {
   text-decoration: none;
@@ -225,7 +230,7 @@
 }
 
 .border{
-  border: solid 1px;
+  border: solid black 1px;
 }
 
 .event-details-left{
@@ -385,6 +390,7 @@
   width: 210px;
   display: block;
   margin: 0px auto;
+  
 }
 
 .profile-image:hover{
@@ -393,6 +399,58 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
+.profile-pic-container{
+  padding-top: 25px;
+}
+
+.profile-name{
+  padding-left: 10px;
+  background: #ae79fa;
+  box-shadow: 0 4px 6px 0 hsl(0deg 0% 0% / 20%);
+  border-radius: 4px;
+  color: white;
+  width: 100%;
+}
+
+.profile-info-container{
+  padding-top: 50px;
+}
+.profile-planz-container{
+  padding-top: 60px;
+}
+
+.profile-planz-card{
+  border: solid black 1px;
+  background: white;
+  padding: 25px;
+  border-radius: 4px;
+  width: 200px;
+  height: 175px;
+  border: solid #e7dafa 2px;
+  margin: 25px;
+  box-shadow: 0 4px 6px 0 hsl(0deg 0% 0% / 20%);
+  overflow:hidden;
+}
+.profile-planz-card:hover{
+  border: solid 1px #ae79fa;
+}
+
+.flex-wrap{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-planz-header{
+  background: #ae79fa;
+  box-shadow: 0 4px 6px 0 hsl(0deg 0% 0% / 20%);
+  border-radius: 4px;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
 @keyframes spin {
   from {
       transform:rotate(0deg);
@@ -400,6 +458,11 @@
   to {
       transform:rotate(360deg);
   }
+}
+
+.profile-username{
+  padding-top: 15px;
+  
 }
 
 /* TIMELINE */
@@ -421,14 +484,34 @@
 }
 
 .footer{
-  text-align: center; 
+  /* text-align: center; 
+  justify-content: center;
   position:fixed;
-  bottom:0;
+  bottom:25px;
   width:100%;
   color: black;
-  height:40px;   /* Height of the footer */
+  height:40px;   
   border-radius: 4px;
+  background: #fff2fb; */
+  margin-top: 1rem;
+  padding: 5px;
+  padding-bottom:0;
+  position: fixed;
+  bottom: 0;
+  justify-content: center;
+  width: 100%;
+  color: black;
 }
+
+.footer-link{
+  height: 25px;
+  width: 25px;
+  margin: 10px;
+  
+  
+}
+
+
 
 .background-none{
   background: none;

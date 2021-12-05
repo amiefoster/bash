@@ -61,7 +61,7 @@ function ExpenseForm({ toggleExpenseForm, id, user, guests}) {
                 onChange={handleChange}
               >
                 <option value="">Choose A Guest</option>
-                <option value={user.name}>{user.name}</option>
+                
                 {guests &&
                   guests.map((guest) => (
                     <option key={guest.id} value={guest.id}>

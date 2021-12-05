@@ -1,10 +1,25 @@
+import Github from '../images/github.png';
+import LinkedIn from '../images/linkedin.png';
+import Email from '../images/email.png';
+
 function Footer(){
     return(
-        <div>
-            <div class="row justify-content-center footer">
-                <div class="col-sm-4 background-none">
-                    <p className="background-none">Made with ♡ by Amie LINKEDIN GITHUB EMAIL</p>
+        <div className="container login-footer">
+            <div className="row footer">
+                <div className="col-sm-5 footer-content">
+                    Made with ♡ by Amie Foster
 
+                    <a href="https://github.com/amiefoster" target="_blank">
+                      <img className="footer-link"  src={Github} />  
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/amie-n-foster/" target="_blank">
+                      <img className="footer-link" src={LinkedIn} /> 
+                    </a>
+
+                    <a href="mailto: amie.n.foster@gmail.com" target="_blank">
+                      <img className="footer-link" src={Email} />
+                    </a>
                 </div>
             </div>
         </div>

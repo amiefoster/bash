@@ -11,7 +11,7 @@ function LoginPage({ setUser = () => console.log("") }) {
 
   return (
     <>
-      <div className="container">
+      <div className="container login-page">
         <div className="row justify-content-center">
           <div className="row justify-content-center header-container">
             <div className="col-sm-6 header-left">

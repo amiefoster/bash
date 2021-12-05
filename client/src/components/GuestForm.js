@@ -27,7 +27,6 @@ function GuestForm({ toggleGuestForm, id, user }) {
   };
 
   const handleSubmit = (event) => {
-    console.log("THIS IS THE FORM DATA", formData);
     event.preventDefault();
     fetch("/guests", {
       method: "POST",

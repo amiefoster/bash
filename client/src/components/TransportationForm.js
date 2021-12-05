@@ -63,7 +63,7 @@ function TransportationForm({ toggleTransportationForm, id, user, guests }) {
                 onChange={handleChange}
               >
                 <option value="">Choose A Guest</option>
-                <option value={user.name}>{user.name}</option>
+                
                 {guests &&
                   guests.map((guest) => (
                     <option key={guest.id} value={guest.id}>
@@ -111,7 +111,7 @@ function TransportationForm({ toggleTransportationForm, id, user, guests }) {
             <label htmlFor="details"></label>
             <input
               className="event-form-text"
-              placeholder="Details (ex: Flight no.)"
+              placeholder="Details (ex: Departure time, Flight no.)"
               type="text"
               name="details"
               autoComplete="off"

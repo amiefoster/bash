@@ -27,17 +27,33 @@ function EventForm({ user, toggleForm, addEvent, events, setEvents }) {
       body: JSON.stringify({
         name: formData.name,
         description: formData.description,
-        date: formData.name,
+        date: formData.date,
         location: formData.location,
         user_id: user.id,
       }),
     })
       .then((response) => response.json())
       .then((newEvent) => {
-        console.log(newEvent);
-        toggleForm();
-      });
+        console.log(newEvent)
+        addUserAsGuest(user.id, newEvent.id)
+        toggleForm()
+      })
   };
+
+  const addUserAsGuest = (user, event) => {
+    console.log(user, event)
+    fetch("/guests", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        event_id: event,
+        user_id: user,
+      }),
+    })
+
+  }
 
   return (
     <div className="modal-form">
@@ -81,7 +97,7 @@ function EventForm({ user, toggleForm, addEvent, events, setEvents }) {
             <label htmlFor="date"></label>
             <input
               className="event-form-text"
-              placeholder="Date (Month 00)"
+              placeholder="Date (MM/DD/YY)"
               type="text"
               name="date"
               autoComplete="off"

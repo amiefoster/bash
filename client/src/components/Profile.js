@@ -4,17 +4,23 @@ function Profile({ user }) {
   return (
     <div className="container">
       <div className="row justify-content-center">
-        <div className="col-md-4">
+        <div className="col-md-3  profile-pic-container">
           <img className="profile-image" src={user.image}></img>
-          <h1 className="text-center profile-name">{user.name}</h1>
-          <h3 className="text-center profile-bio">{user.bio}</h3>
+          <p className="text-center profile-username">@{user.username}</p>
+        </div>
+        <div className="col-md-7  profile-info-container">
+          <h1 className="text-left profile-name">{user.name}</h1>
+          
+          <h5 className="text-left profile-bio">{user.bio}</h5>
         </div>
       </div>
-      <div className="row justify-content-center marg-top-40">
-        <div className="col-md-4 border">
-            <h1>Upcoming Planz:</h1>
+
+
+      <div className="row justify-content-center profile-planz-container">
+        <div className="col-md-8 flex-wrap ">
+            <h1 className="profile-planz-header" >Upcoming Planz:</h1>
             {user.all_events.map((event) => (
-              <div className="event">{event}</div>
+              <h5 className="profile-planz-card">{event}</h5>
             ))}
         </div>
       </div>

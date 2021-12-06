@@ -199,12 +199,7 @@ function EventDetails({ user }) {
                   onClick={toggleGuestForm}
                 />
               </div>
-                <li
-                    className="list-group-item"
-                    style={{ backgroundColor: "#fdddf4" }}
-                  >
-                    {user.name}{" "}
-                  </li>
+                
               {details.guests.map((guest) => (
                 <li
                   key={guest.id}

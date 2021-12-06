@@ -118,10 +118,10 @@ function SigninForm({ setUser }) {
                 {isLoading ? "Loading..." : "Signup"}
               </button>
             </div>
-            <div>
-              {/* {errors.map((err) => (
-            <Error key={err}>{err}</Error>
-            ))} */}
+            <div className="error-container">
+              {errors.map((err) => (
+            <p className="error" key={err}>{err}</p>
+            ))}
             </div>
           </form>
         </div>

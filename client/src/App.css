@@ -511,7 +511,10 @@
   
 }
 
-
+.error{
+  color: #f07271;
+  font-size: small;
+}
 
 .background-none{
   background: none;

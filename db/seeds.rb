@@ -111,6 +111,10 @@ Event.create!([
 puts "🧑‍🤝‍🧑🧑‍🤝‍🧑🧑‍🤝‍🧑🧑‍🤝‍🧑Seeding Guests..."
 Guest.create!([
     {
+        user_id: 1, 
+        event_id: 1
+    }, 
+    {
         user_id: 2, 
         event_id: 1
     }, 
@@ -121,6 +125,10 @@ Guest.create!([
     {
         user_id: 4, 
         event_id: 1
+    }, 
+    {
+        user_id: 5, 
+        event_id: 2
     }, 
     {
         user_id: 6, 
@@ -134,6 +142,10 @@ Guest.create!([
         user_id: 8, 
         event_id: 2
     }, 
+    {
+        user_id: 9, 
+        event_id: 3
+    },
     {
         user_id: 10, 
         event_id: 3

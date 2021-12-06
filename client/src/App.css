@@ -223,7 +223,7 @@
   margin: 10px;
   max-height: fit-content !important;
   text-align: left;
-  box-shadow: 0 4px 6px 0 hsl(0deg 0% 0% / 35%);
+  
 }
 
 .details-header-left {
@@ -278,7 +278,6 @@ input,
 label {
   display: block !important;
   text-align: left;
-  color: #6c757d;
 }
 label:hover {
   border-bottom: solid black 1px;
@@ -315,6 +314,8 @@ input:hover {
 
 .card-header {
   font-size: 20px;
+  color: white
+  
 }
 
 .details-name {
@@ -364,22 +365,36 @@ input:hover {
 }
 
 /* DETAILS CARD COLOR */
+.list-group-item{
+  background-color: #f5d7f5;
+}
+
 .guest-header-bg {
-  background-color: #ff7ad8 !important;
+  background-color: #ae79fa !important;
+}
+.card-header:hover{
+  color: black;
+  box-shadow: 0 6px 8px 0 hsl(0deg 0% 0% / 50%);
 }
 
 .accommodation-header-bg {
-  background-color: #2fe885 !important;
+  background-color: #ae79fa !important;
+  
 }
 .transportation-header-bg {
-  background-color: #ffa451 !important;
+  background-color: #ae79fa !important;
+    
 }
 .expense-header-bg {
-  background-color: #52f1f0 !important;
+  background-color: #ae79fa !important;
+  
 }
 .list-header-bg {
-  background-color: #f07271 !important;
+  background-color: #ae79fa !important;
+  
 }
+
+
 
 /* MODAL */
 

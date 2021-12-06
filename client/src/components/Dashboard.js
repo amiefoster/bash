@@ -19,9 +19,6 @@ function Dashboard({ user, setUser }) {
 
   const checkIfEventsExist = (eventsArray) => {
     if (!!eventsArray) {
-      // const filteredEvents = eventsArray.filter(
-      //   (event) => event.user.id == user.id
-      // );
       setEvents(eventsArray);
     }
   };
@@ -57,4 +54,3 @@ function Dashboard({ user, setUser }) {
 
 export default Dashboard;
 
-//need to add to filtered events so it shows events that the user is a guest of as well*********

@@ -212,7 +212,7 @@ function EventDetails({ user }) {
                 <li
                   key={guest.id}
                   className="list-group-item"
-                  style={{ backgroundColor: "#fdddf4" }}
+                  style={{ backgroundColor: "#fff2ff" }}
                 >
                   {guest.user.name}{" "}
                   <img
@@ -242,7 +242,7 @@ function EventDetails({ user }) {
                 <li
                   key={stay.id}
                   className="list-group-item"
-                  style={{ backgroundColor: "#c5ebd7" }}
+                  style={{ backgroundColor: "#fff2ff" }}
                 >
                   {stay.name} - Located at: {stay.address}
                   <img
@@ -272,7 +272,7 @@ function EventDetails({ user }) {
                 <li
                   key={transportation.id}
                   className="list-group-item"
-                  style={{ backgroundColor: "#ffdec0" }}
+                  style={{ backgroundColor: "#fff2ff" }}
                 >
                   {transportation.nameOfUser} - {transportation.mode} - {transportation.date} -{" "}
                   {transportation.details}
@@ -302,7 +302,7 @@ function EventDetails({ user }) {
                 <li
                   key={expense.id}
                   className="list-group-item"
-                  style={{ backgroundColor: "#cbfcfb" }}
+                  style={{ backgroundColor: "#fff2ff" }}
                 >
                   {expense.nameOfGuest} - {expense.name} - {expense.details} - ${expense.amount}
                   <img
@@ -332,7 +332,7 @@ function EventDetails({ user }) {
                 <li
                   key={item.id}
                   className="list-group-item"
-                  style={{ backgroundColor: "#fcdfdf" }}
+                  style={{ backgroundColor: "#fff2ff" }}
                 >
                   {item.item}
                   <img

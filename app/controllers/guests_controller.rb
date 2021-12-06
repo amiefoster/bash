@@ -6,7 +6,7 @@ class GuestsController < ApplicationController
 
     def create
         new_guest = Guest.create!(guest_params)
-        render json: new_guest
+        render json: new_guest, status: :created
     end
 
     def destroy

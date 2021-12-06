@@ -2,7 +2,7 @@ class PackingListsController < ApplicationController
 
     def create
         new_item = PackingList.create!(packing_params)
-        render json: new_item
+        render json: new_item, status: :created
 
     end
 

@@ -2,7 +2,7 @@ class ActivitiesController < ApplicationController
 
     def create
         new_activity = Activity.create!(activity_params)
-        render json: new_activity
+        render json: new_activity, status: :created
 
     end
 

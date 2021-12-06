@@ -2,7 +2,7 @@ class TransportationsController < ApplicationController
 
     def create
         new_transportation = Transportation.create!(transportation_params)
-        render json: new_transportation
+        render json: new_transportation, status: :created
 
     end
 

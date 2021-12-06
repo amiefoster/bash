@@ -12,17 +12,17 @@ function Dashboard({ user, setUser }) {
   };
 
   useEffect(() => {
-    fetch("/events").then((response) =>
-      response.json().then((eventsArray) => checkIfEventsExist(eventsArray))
+    fetch(`/users/${user.id}`).then((response) =>
+      response.json().then((eventsArray) => checkIfEventsExist(eventsArray.events))
     );
   }, [newEventForm]);
 
   const checkIfEventsExist = (eventsArray) => {
     if (!!eventsArray) {
-      const filteredEvents = eventsArray.filter(
-        (event) => event.user.id == user.id
-      );
-      setEvents(filteredEvents);
+      // const filteredEvents = eventsArray.filter(
+      //   (event) => event.user.id == user.id
+      // );
+      setEvents(eventsArray);
     }
   };
 

@@ -2,7 +2,7 @@ class ExpensesController < ApplicationController
 
     def create
         new_expense = Expense.create!(expense_params)
-        render json: new_expense
+        render json: new_expense, status: :created
 
     end
 

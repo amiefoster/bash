@@ -19,8 +19,9 @@ function Profile({ user }) {
       <div className="row justify-content-center profile-planz-container">
         <div className="col-md-8 flex-wrap ">
             <h1 className="profile-planz-header" >Upcoming Planz:</h1>
-            {user.all_events.map((event) => (
-              <h5 className="profile-planz-card">{event}</h5>
+            {user.events.map((event) => (
+              <h5 className="profile-planz-card">{event.name} <div className="profile-date">{event.date}</div> </h5>
+              
             ))}
         </div>
       </div>

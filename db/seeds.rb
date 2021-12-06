@@ -12,70 +12,70 @@ User.create!([
     {
         name: "Amie Foster ", 
         username: "afoster", 
-        password: "password", 
+        password: "Password1!", 
         image: "https://media-exp1.licdn.com/dms/image/C5603AQHPJYz2Vn6kzg/profile-displayphoto-shrink_800_800/0/1631314484075?e=1643846400&v=beta&t=XnxUvGuGxsHxW3AoYMH89PMhjejoIijQeEh9ve54eIs", 
         bio: "I'm Amie! I love true crime and code! Cant wait to make some planz!"
     }, 
     {
         name: "Ashley Doan", 
         username: "adoan", 
-        password: "password", 
+        password: "Password1!", 
         image: "Image", 
         bio: "Bio"
     }, 
     {
         name: "Courtney Doan", 
         username: "cdoan", 
-        password: "password", 
+        password: "Password1!", 
         image: "Image", 
         bio: "Bio"
     }, 
     {
         name: "Alexa Bruington", 
         username: "abruington", 
-        password: "password", 
+        password: "Password1!", 
         image: "Image", 
         bio: "Bio"
     }, 
     {
         name: "Carrie Bradshaw", 
         username: "cbradshaw", 
-        password: "password", 
+        password: "Password1!", 
         image: "https://www.marieclaire.com.au/media/79640/cb-01.jpg?width=720&center=0.0,0.0", 
         bio: "I love shoes!"
     }, 
     {
         name: "Samantha Jones", 
         username: "sjones", 
-        password: "password", 
+        password: "Password1!", 
         image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/kim-cattrall-samantha-jones-sex-and-the-city-1611304823.jpg", 
         bio: "Bio"
     }, 
     {
         name: "Charlotte York", 
         username: "cyork", 
-        password: "password", 
+        password: "Password1!", 
         image: "https://cdn.mos.cms.futurecdn.net/5HUkPz5pjsYvGTqf5xTtVP.jpg", 
         bio: "Bio"
     }, 
     {
         name: "Miranda Hobbs", 
         username: "mhobbs", 
-        password: "password", 
+        password: "Password1!", 
         image: "https://corporette.com/wp-content/uploads/2008/05/miranda-hobbes-fashion.jpg", 
         bio: "I'm a lawyer and I love hanging out with my gals!"
     }, 
     {
         name: "Denise Fritts", 
         username: "dfritts", 
-        password: "password", 
+        password: "Password1!", 
         image: "Image", 
         bio: "Bio"
     }, 
     {
         name: "John Snow", 
         username: "jsnow", 
-        password: "password", 
+        password: "Password1!", 
         image: "https://www.koimoi.com/wp-content/new-galleries/2021/10/game-of-thrones-trivia-when-kit-haringtons-night-of-partying-resulted-in-stand-ins-with-jon-snows-wigs-substituting-for-him-in-season-3-001.jpg", 
         bio: "Life is too short! Im back and ready to make some planz!"
     }

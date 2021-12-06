@@ -1,14 +1,12 @@
 import { useState } from "react";
-import Calendar from 'react-calendar';
-
 
 function EventForm({ user, toggleForm, addEvent, events, setEvents }) {
   //const [newEvent, setNewEvent] = useState([])
-  const [value, onChange] = useState(new Date());
   const [formData, setFormData] = useState({
     name: "",
     description: "",
     date: "",
+    end_date: "",
     location: "",
     user_id: "",
   });
@@ -31,6 +29,7 @@ function EventForm({ user, toggleForm, addEvent, events, setEvents }) {
         name: formData.name,
         description: formData.description,
         date: formData.date,
+        end_date: formData.end_date,
         location: formData.location,
         user_id: user.id,
       }),
@@ -62,7 +61,7 @@ function EventForm({ user, toggleForm, addEvent, events, setEvents }) {
     <div className="modal-form">
       <div onClick={toggleForm} className="overlay"></div>
       <div
-        className="modal-form-content"
+        className="modal-form-content event-form"
         style={{ backgroundColor: "#f5dfee" }}
       >
         <h3 style={{ backgroundColor: "#f5dfee" }}>Create New Event</h3>
@@ -95,20 +94,7 @@ function EventForm({ user, toggleForm, addEvent, events, setEvents }) {
               value={formData.description}
               onChange={handleChange}
             />
-          </div>
-          <div className="new-event-text-field">
-            <label htmlFor="date"></label>
-            <input
-              className="event-form-text"
-              placeholder="Date (MM/DD/YY)"
-              type="date"
-              name="date"
-              autoComplete="off"
-              value={formData.date}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="new-event-text-field">
+            <div className="new-event-text-field">
             <label htmlFor="location"></label>
             <input
               className="event-form-text"
@@ -120,16 +106,39 @@ function EventForm({ user, toggleForm, addEvent, events, setEvents }) {
               onChange={handleChange}
             />
           </div>
+          </div>
+          <div className="new-event-text-field event-date-field">
+            <label className="new-event-text-field" htmlFor="date">Start Date:</label>
+            <input
+              className="event-form-text"
+              placeholder="Start Date"
+              type="date"
+              name="date"
+              autoComplete="off"
+              value={formData.date}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="new-event-text-field event-date-field">
+            <label className="new-event-text-field" htmlFor="date">End Date:</label>
+            <input
+              className="event-form-text"
+              placeholder="end Date"
+              type="date"
+              name="end_date"
+              autoComplete="off"
+              value={formData.end_date}
+              onChange={handleChange}
+            />
+          </div>
+          
           <div style={{ backgroundColor: "#f5dfee" }}>
             <button className="new-detail-button" type="submit">
               Create
             </button>
           </div>
         </form>
-        <Calendar
-        onChange={onChange}
-        value={value}
-      />
+      
       </div>
     </div>
   );

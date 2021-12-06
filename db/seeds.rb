@@ -88,7 +88,8 @@ Event.create!([
         name: "Glamping", 
         description: "Girls weekens GLAMPING!", 
         location: "Mammoth, Ca", 
-        date: "2021/09/22", 
+        date: "2022/09/13", 
+        end_date: "2022/09/17",
         user_id: 1
     }, 
     {
@@ -96,6 +97,7 @@ Event.create!([
         description: "Charlottes bachelorette party!", 
         location: "Miami, Fl", 
         date: "2022/03/03", 
+        end_date: "2022/03/06",
         user_id: 5
     }, 
     {
@@ -103,6 +105,7 @@ Event.create!([
         description: "Lets get the gals together for a fun weekend!", 
         location: "Napa, Ca", 
         date: "2022/01/15", 
+        end_date: "2022/01/17",
         user_id: 9
     }
 ])
@@ -231,14 +234,14 @@ Activity.create!([
     {
         name: "Hot Springs", 
         description: "Lets go take a dip in some natural hot springs!", 
-        date: "2022/09/04", 
+        date: "2022/09/15", 
         time: "10 am",
         event_id: "1", 
     }, 
     {
         name: "Horseback Ride", 
         description: "Sunset horseback ride around Horseshoe lake!", 
-        date: "2022/09/03", 
+        date: "2022/09/14", 
         time: "6 pm",
         event_id: "1", 
     }, 

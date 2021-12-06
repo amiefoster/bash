@@ -78,21 +78,7 @@ function ActivityForm({ toggleActivityForm, id }) {
               onChange={handleChange}
             />
           </div>
-          <div
-            className="new-event-text-field"
-            style={{ backgroundColor: "#e7dafa" }}
-          >
-            <label htmlFor="date"></label>
-            <input
-              className="event-form-text"
-              placeholder="Date (MM/DD/YY)"
-              type="text"
-              name="date"
-              autoComplete="off"
-              value={formData.date}
-              onChange={handleChange}
-            />
-          </div>
+          
           <div
             className="new-event-text-field"
             style={{ backgroundColor: "#e7dafa" }}
@@ -101,10 +87,26 @@ function ActivityForm({ toggleActivityForm, id }) {
             <input
               className="event-form-text"
               placeholder="Time (00 am/pm)"
-              type="text"
+              type="time"
               name="time"
               autoComplete="off"
               value={formData.time}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div
+            className="new-event-text-field"
+            style={{ backgroundColor: "#e7dafa" }}
+          >
+            <label htmlFor="date"></label>
+            <input
+              className="event-form-text event-form-date"
+              placeholder="Date (MM/DD/YY)"
+              type="date"
+              name="date"
+              autoComplete="off"
+              value={formData.date}
               onChange={handleChange}
             />
           </div>

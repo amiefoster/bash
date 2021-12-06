@@ -1,15 +1,16 @@
-import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
-import GuestForm from "./GuestForm";
-import AccommodationForm from "./AccommodationForm";
-import TransportationForm from "./TransportationForm";
-import ExpenseForm from "./ExpenseForm";
-import PackingListForm from "./PackingListForm";
-import ActivityForm from "./ActivityForm";
-import TimelineContainer from "./TimelineContainer";
-import Add from "../images/small-add.png";
-import Close from "../images/remove.png";
+import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import GuestForm from './GuestForm';
+import AccommodationForm from './AccommodationForm';
+import TransportationForm from './TransportationForm';
+import ExpenseForm from './ExpenseForm';
+import PackingListForm from './PackingListForm';
+import ActivityForm from './ActivityForm';
+import TimelineContainer from './TimelineContainer';
+import Add from '../images/small-add.png';
+import Close from '../images/remove.png';
+import Back from '../images/back.png'
 
 
 function EventDetails({ user }) {
@@ -116,6 +117,13 @@ function EventDetails({ user }) {
 
   return (
     <div>
+      <div className="row">
+        <div className="col-sm-2 back-button">
+          <Link to="/">
+            <img src={Back} className="add-event-button" />
+          </Link>
+        </div>
+      </div>
       {details && (
         <div className="row column-container">
           <div className="col-md-3 event-details-left">
@@ -130,7 +138,7 @@ function EventDetails({ user }) {
                 <p>Hosted by, {details.user.name}</p>
               </div>
               <div>
-                <p>{details.date}</p>
+                <p>{details.date} - {details.end_date}</p>
               </div>
               <div>
                 <p>{details.location}</p>

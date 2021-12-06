@@ -89,21 +89,7 @@ function TransportationForm({ toggleTransportationForm, id, user, guests }) {
               onChange={handleChange}
             />
           </div>
-          <div
-            className="new-event-text-field"
-            style={{ backgroundColor: "#ffdec0" }}
-          >
-            <label htmlFor="date"></label>
-            <input
-              className="event-form-text"
-              placeholder="Date (MM/DD/YY)"
-              type="text"
-              name="date"
-              autoComplete="off"
-              value={formData.date}
-              onChange={handleChange}
-            />
-          </div>
+          
           <div
             className="new-event-text-field"
             style={{ backgroundColor: "#ffdec0" }}
@@ -116,6 +102,22 @@ function TransportationForm({ toggleTransportationForm, id, user, guests }) {
               name="details"
               autoComplete="off"
               value={formData.details}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div
+            className="new-event-text-field"
+            style={{ backgroundColor: "#ffdec0" }}
+          >
+            <label htmlFor="date"></label>
+            <input
+              className="event-form-text"
+              placeholder="Date (MM/DD/YY)"
+              type="date"
+              name="date"
+              autoComplete="off"
+              value={formData.date}
               onChange={handleChange}
             />
           </div>

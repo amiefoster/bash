@@ -35,7 +35,7 @@ function Dashboard({ user, setUser }) {
     <div className="row column-container">
       <div className="row add-event-container">
         <div className="col-sm-9 dashboard-title">{user.name}'s Planz!</div>
-        <div className="col-sm-2 dash-button">
+        <div className="col-sm-2">
           <img src={Add} className="add-event-button" onClick={toggleForm} />
         </div>
       </div>

@@ -1,11 +1,12 @@
-import "../App.css";
-import { useState, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
-import Dashboard from "./Dashboard";
-import Profile from "./Profile";
-import LoginPage from "./LoginPage";
-import HomeNav from "./HomeNav";
-import EventDetails from "./EventDetails";
+import '../App.css';
+import { useState, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Dashboard from './Dashboard';
+import Profile from './Profile';
+import LoginPage from './LoginPage';
+import HomeNav from './HomeNav';
+import EventDetails from './EventDetails';
+import Homepage from './Homepage'
 
 function App() {
   const [user, setUser] = useState(null);
@@ -29,6 +30,11 @@ function App() {
 
       <Routes>
         <Route
+            exact
+            path="/home"
+            element={<Homepage user={user} setUser={setUser} />}
+          />
+          <Route
           exact
           path="/"
           element={<Dashboard user={user} setUser={setUser} />}

@@ -1,5 +1,5 @@
 function Profile({ user }) {
-  console.log(user);
+  console.log(user.ordered_events);
 
   return (
     <div className="container">
@@ -19,7 +19,7 @@ function Profile({ user }) {
       <div className="row justify-content-center profile-planz-container">
         <div className="col-md-8 flex-wrap ">
             <h1 className="profile-planz-header" >Upcoming Planz:</h1>
-            {user.events.map((event) => (
+            {user.ordered_events.map((event) => (
               <h5 className="profile-planz-card">{event.name} <div className="profile-date">{event.date}</div> </h5>
               
             ))}

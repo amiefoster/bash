@@ -1,7 +1,10 @@
 import { useState } from "react";
+import Calendar from 'react-calendar';
+
 
 function EventForm({ user, toggleForm, addEvent, events, setEvents }) {
   //const [newEvent, setNewEvent] = useState([])
+  const [value, onChange] = useState(new Date());
   const [formData, setFormData] = useState({
     name: "",
     description: "",
@@ -98,7 +101,7 @@ function EventForm({ user, toggleForm, addEvent, events, setEvents }) {
             <input
               className="event-form-text"
               placeholder="Date (MM/DD/YY)"
-              type="text"
+              type="date"
               name="date"
               autoComplete="off"
               value={formData.date}
@@ -123,6 +126,10 @@ function EventForm({ user, toggleForm, addEvent, events, setEvents }) {
             </button>
           </div>
         </form>
+        <Calendar
+        onChange={onChange}
+        value={value}
+      />
       </div>
     </div>
   );

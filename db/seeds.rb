@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-puts "👩👱‍♀️👱‍♂️🧔Seeding Users..."
+puts "👤👤👤 Seeding Users... 👤👤👤"
 
 User.create!([
     {
@@ -81,34 +81,34 @@ User.create!([
     }
 ])
 
-puts "🎉🎉🎉Seeding Events..."
+puts "🎉🎉🎉 Seeding Events... 🎉🎉🎉"
 
 Event.create!([
     {
         name: "Glamping", 
         description: "Girls weekens GLAMPING!", 
         location: "Mammoth, Ca", 
-        date: "09/01/2021 - 09/06/2021", 
+        date: "2021/09/22", 
         user_id: 1
     }, 
     {
         name: "Bachelorette Party", 
         description: "Charlottes bachelorette party!", 
         location: "Miami, Fl", 
-        date: "03/03/2022 - 03/06/2022", 
+        date: "2022/03/03", 
         user_id: 5
     }, 
     {
         name: "Girls weekend!", 
         description: "Lets get the gals together for a fun weekend!", 
         location: "Napa, Ca", 
-        date: "01/04/2022 - 03/07/2022", 
+        date: "2022/01/15", 
         user_id: 9
     }
 ])
 
 #right not im not making the HOST a guest but maybe i will have to do that later on for ease on the front end
-puts "🧑‍🤝‍🧑🧑‍🤝‍🧑🧑‍🤝‍🧑🧑‍🤝‍🧑Seeding Guests..."
+puts "😃😃😃 Seeding Guests... 😃😃😃"
 Guest.create!([
     {
         user_id: 1, 
@@ -168,7 +168,7 @@ Guest.create!([
     }
 ])
 
-puts "Seeding accommodations..."
+puts "🏨🏨🏨 Seeding accommodations...🏨🏨🏨 "
 Accommodation.create!([
     {
         name: "Airbnb", 
@@ -187,85 +187,85 @@ Accommodation.create!([
     }
 ])
 
-puts "Seeding transportation..."
+puts "🛫🛫🛫 Seeding transportation... 🛬🛬🛬"
 Transportation.create!([
     {
         mode: "Flight", 
-        date: "March 3", 
+        date: "2022/03/03", 
         details: "F012", 
         guest_id: 6, 
         event_id: 2, 
     },
     {
         mode: "Flight", 
-        date: "March 3", 
+        date: "2022/03/03", 
         details: "F012",  
         guest_id: 7, 
         event_id: 2, 
     },
     {
         mode: "Flight", 
-        date: "March 3", 
+        date: "2022/03/03", 
         details: "F012",  
         guest_id: 8, 
         event_id: 2, 
     },
     {
         mode: "Flight", 
-        date: "March 3", 
+        date: "2022/03/03", 
         details: "F012",  
         guest_id: 9, 
         event_id: 2, 
     },
     {
         mode: "Flight", 
-        date: "Janurary 4", 
+        date: "2022/01/15", 
         details: "Z155", 
         guest_id: 10, 
         event_id: 3, 
     },
 ])
 
-puts "Seeding activities..."
+puts "🤸🤸🤸 Seeding activities... 🤸🤸🤸"
 Activity.create!([
     {
         name: "Hot Springs", 
         description: "Lets go take a dip in some natural hot springs!", 
-        date: "09/04/2021", 
+        date: "2022/09/04", 
         time: "10 am",
         event_id: "1", 
     }, 
     {
         name: "Horseback Ride", 
         description: "Sunset horseback ride around Horseshoe lake!", 
-        date: "09/03/2021", 
+        date: "2022/09/03", 
         time: "6 pm",
         event_id: "1", 
     }, 
     {
         name: "Spa", 
         description: "Private spa choose from facial or massage and wind down with the sauna!", 
-        date: "03/04/2021", 
+        date: "2022/03/04", 
         time: "10 am",
         event_id: "2", 
     }, 
     {
         name: "Wine tasting", 
         description: "Private tour of infamous Andretti Windery.Lunch and tastings included in tour.", 
-        date: "01/05/2022", 
+        date: "2022/01/05", 
         time: "11 am",
         event_id: "3", 
     }, 
     {
         name: "Dinner", 
         description: "Dinner at infamous Michelin Star restaurant, French Laundry.", 
-        date: "01/06/2022", 
+        date: "2022/01/06", 
         time: "06 pm",
         event_id: "3", 
     }
 ])
 
-puts "Seeding expenses..."
+puts "💰💰💰 Seeding expenses... 💰💰💰"
 Expense.create!([
     {
         name: "Horseback Ride", 
@@ -297,7 +297,7 @@ Expense.create!([
     }
 ])
 
-puts "Seeding packing list..."
+puts "🧳🧳🧳 Seeding packing list... 🧳🧳🧳"
 PackingList.create([
     {
         item: "Bathing suit", 
@@ -324,3 +324,5 @@ PackingList.create([
         event_id: "3"
     },
 ])
+
+puts "🌱🌱🌱 DONE SEETING! 🌱🌱🌱"

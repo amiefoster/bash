@@ -1,7 +1,5 @@
-import Background from '../images/background.png'
 
 function Event({ userEvent }) {
-
   return (
     <div className="container background-none" >
       <div className="event-card">

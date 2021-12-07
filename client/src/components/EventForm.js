@@ -43,7 +43,6 @@ function EventForm({ user, toggleForm, addEvent, events, setEvents }) {
   };
 
   const addUserAsGuest = (user, event) => {
-    console.log(user, event)
     fetch("/guests", {
       method: "POST",
       headers: {

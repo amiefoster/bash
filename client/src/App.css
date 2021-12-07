@@ -578,6 +578,12 @@ input:hover {
   margin-left: 30px;
 }
 
+.delete-event-button{
+  justify-content: right;
+  text-align: right;
+  margin-right: 30px;
+}
+
 .background-none {
   background: none;
 }

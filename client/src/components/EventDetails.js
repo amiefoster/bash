@@ -11,6 +11,8 @@ import TimelineContainer from './TimelineContainer';
 import Add from '../images/small-add.png';
 import Close from '../images/remove.png';
 import Back from '../images/back.png'
+import Trash from '../images/trash.png'
+
 
 
 function EventDetails({ user }) {
@@ -115,13 +117,28 @@ function EventDetails({ user }) {
     .then(setReload(!reload))
   }
 
+  const handleEventDelete = (id) => {
+    fetch(`/events/${id}`, {
+      method: "DELETE", 
+    })
+    .then(setReload(!reload))
+    .then(navigate("/home"))
+  }
+
   return (
     <div>
-      <div className="row">
-        <div className="col-sm-2 back-button">
-          <Link to="/">
-            <img src={Back} className="add-event-button" />
-          </Link>
+      <div className="container" >
+        <div className="row ">
+          
+          <div className="col-sm-2 back-button ">
+            <Link to="/">
+              <img src={Back} className="add-event-button" />
+            </Link>
+          </div>
+
+          <div className="col-sm-9 delete-event-button ">
+            <img src={Trash} className="add-event-button" onClick={() => handleEventDelete(details.id)} />
+          </div>
         </div>
       </div>
       {details && (

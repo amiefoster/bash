@@ -5,7 +5,6 @@ import {
   themes,
   createTheme,
 } from "@merc/react-timeline";
-import { useState } from 'react';
 import Remove from "../images/remove.png";
 
 const customTheme = createTheme(themes.default, {
@@ -36,6 +35,7 @@ function TimelineContainer({ activity, reload, setReload }) {
     })
     .then(setReload(!reload))
   }
+  
 
   return (
     <div className="" style={{ paddingLeft: "none" }}>

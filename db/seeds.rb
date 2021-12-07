@@ -86,7 +86,7 @@ puts "🎉🎉🎉 Seeding Events... 🎉🎉🎉"
 Event.create!([
     {
         name: "Glamping", 
-        description: "Girls weekens GLAMPING!", 
+        description: "Girls weekend GLAMPING!", 
         location: "Mammoth, Ca", 
         date: "2022/09/13", 
         end_date: "2022/09/17",
@@ -175,17 +175,17 @@ puts "🏨🏨🏨 Seeding accommodations...🏨🏨🏨 "
 Accommodation.create!([
     {
         name: "Airbnb", 
-        address: "123 Winter Wassal Way" ,
+        address: "4000 Meridian Blvd, Mammoth Lakes, CA 93546" ,
         event_id: 1,
     },
     {
         name: "The Ritz-Carlton, South Beach", 
-        address: "123 Surf St" ,
+        address: "1 Lincoln Rd, Miami Beach, FL 33139" ,
         event_id: 2,
     },
     {
         name: "Airbnb", 
-        address: "123 Wine Lovers Ln" ,
+        address: "4048 Sonoma Highway, Napa CA 94559" ,
         event_id: 3,
     }
 ])

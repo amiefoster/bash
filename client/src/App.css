@@ -122,14 +122,14 @@
 .login-text {
   height: 40px;
   width: 300px;
-  border-bottom: solid black 1px;
+  border-bottom: solid #010101 1px;
   border-top: none;
   border-left: none;
   border-right: none;
   background: none;
 }
 .login-text:hover {
-  border: solid black 1px;
+  border: solid #010101 1px;
 }
 
 .signup-form {
@@ -158,7 +158,7 @@
   justify-content: center;
   height: 100vh;
   background-repeat: no-repeat;
-  border-top: solid 1px black;
+  border-top: solid 1px #010101;
   /* border-top: solid 1px #ae79fa; */
   border-radius: 5px;
 }
@@ -223,7 +223,6 @@
   margin: 10px;
   max-height: fit-content !important;
   text-align: left;
-  
 }
 
 .details-header-left {
@@ -242,7 +241,7 @@
 }
 
 .border {
-  border: solid black 1px;
+  border: solid #010101 1px;
 }
 
 .event-details-left {
@@ -252,7 +251,7 @@
 
 /* DETAIL FORMS */
 .new-detail-button {
-  border: solid 1px black;
+  border: solid 1px #010101;
   margin: 15px;
   background-color: #fff2fb;
   padding: 8px;
@@ -267,7 +266,7 @@
 .event-form-text {
   height: 40px;
   width: 300px;
-  border-bottom: solid black 1px;
+  border-bottom: solid #010101 1px;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -280,14 +279,14 @@ label {
   text-align: left;
 }
 label:hover {
-  border-bottom: solid black 1px;
+  border-bottom: solid #010101 1px;
   border-top: none;
   border-left: none;
   border-right: none;
 }
 
 input:hover {
-  border-bottom: solid black 1px;
+  border-bottom: solid #010101 1px;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -295,8 +294,8 @@ input:hover {
 }
 
 .event-form-text:hover {
-  border: solid black 1px;
-  color: black;
+  border: solid #010101 1px;
+  color: #010101;
 }
 
 .new-event-text-field {
@@ -314,8 +313,7 @@ input:hover {
 
 .card-header {
   font-size: 20px;
-  color: white
-  
+  color: white;
 }
 
 .details-name {
@@ -365,36 +363,30 @@ input:hover {
 }
 
 /* DETAILS CARD COLOR */
-.list-group-item{
+.list-group-item {
   background-color: #f5d7f5;
 }
 
 .guest-header-bg {
   background-color: #ae79fa !important;
 }
-.card-header:hover{
-  color: black;
+.card-header:hover {
+  color: #010101;
   box-shadow: 0 6px 8px 0 hsl(0deg 0% 0% / 50%);
 }
 
 .accommodation-header-bg {
   background-color: #ae79fa !important;
-  
 }
 .transportation-header-bg {
   background-color: #ae79fa !important;
-    
 }
 .expense-header-bg {
   background-color: #ae79fa !important;
-  
 }
 .list-header-bg {
   background-color: #ae79fa !important;
-  
 }
-
-
 
 /* MODAL */
 
@@ -422,7 +414,7 @@ input:hover {
   max-width: 600px;
   min-width: 300px;
   box-shadow: 0 4px 6px 0 hsl(0deg 0% 0% / 20%);
-  border: 1px black solid;
+  border: 1px #010101 solid;
 }
 
 .event-form {
@@ -555,13 +547,24 @@ input:hover {
   bottom: 0;
   justify-content: center;
   width: 100%;
-  color: black;
+  color: #010101;
 }
 
 .footer-link {
   height: 25px;
   width: 25px;
   margin: 10px;
+}
+
+.stay-link {
+  text-decoration: none;
+  color: #010101;
+  transform: scale(0.8);
+}
+
+.stay-link:hover {
+  color: #010101;
+  border-bottom: #010101 solid 1px;
 }
 
 .error {

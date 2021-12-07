@@ -244,7 +244,7 @@ function EventDetails({ user }) {
                   className="list-group-item"
                   style={{ backgroundColor: "#fff2ff" }}
                 >
-                  {stay.name} - Located at: {stay.address}
+                  {stay.name} - Located at: <a className="stay-link" href={`https://maps.google.com/?q=${stay.address}`} target="_blank">{stay.address}</a>
                   <img
                     src={Close}
                     id={stay.id}

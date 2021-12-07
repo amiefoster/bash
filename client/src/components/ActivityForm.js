@@ -43,14 +43,14 @@ function ActivityForm({ toggleActivityForm, id }) {
       <div onClick={toggleActivityForm} className="overlay"></div>
       <div
         className="modal-form-content"
-        style={{ backgroundColor: "#e7dafa" }}
+        style={{ backgroundColor: "#fdddf4" }}
       >
-        <h3 style={{ backgroundColor: "#e7dafa" }}>Add Activity</h3>
+        <h3 style={{ backgroundColor: "#fdddf4" }}>Add Activity</h3>
 
         <form className="new-event-form" onSubmit={handleSubmit}>
           <div
             className="new-event-text-field"
-            style={{ backgroundColor: "#e7dafa" }}
+            style={{ backgroundColor: "#fdddf4" }}
           >
             <label htmlFor="name"></label>
             <input
@@ -65,7 +65,7 @@ function ActivityForm({ toggleActivityForm, id }) {
           </div>
           <div
             className="new-event-text-field"
-            style={{ backgroundColor: "#e7dafa" }}
+            style={{ backgroundColor: "#fdddf4" }}
           >
             <label htmlFor="description"></label>
             <input
@@ -81,7 +81,7 @@ function ActivityForm({ toggleActivityForm, id }) {
           
           <div
             className="new-event-text-field"
-            style={{ backgroundColor: "#e7dafa" }}
+            style={{ backgroundColor: "#fdddf4" }}
           >
             <label htmlFor="time"></label>
             <input
@@ -97,7 +97,7 @@ function ActivityForm({ toggleActivityForm, id }) {
 
           <div
             className="new-event-text-field"
-            style={{ backgroundColor: "#e7dafa" }}
+            style={{ backgroundColor: "#fdddf4" }}
           >
             <label htmlFor="date"></label>
             <input
@@ -111,7 +111,7 @@ function ActivityForm({ toggleActivityForm, id }) {
             />
           </div>
 
-          <div style={{ backgroundColor: "#e7dafa" }}>
+          <div style={{ backgroundColor: "#fdddf4" }}>
             <button className="new-detail-button" type="submit">
               Done
             </button>

@@ -37,14 +37,14 @@ function PackingListForm({ togglePackingListForm, id }) {
       <div onClick={togglePackingListForm} className="overlay"></div>
       <div
         className="modal-form-content"
-        style={{ backgroundColor: "#fcdfdf" }}
+        style={{ backgroundColor: "#fdddf4" }}
       >
-        <h3 style={{ backgroundColor: "#fcdfdf" }}>Add Item</h3>
+        <h3 style={{ backgroundColor: "#fdddf4" }}>Add Item</h3>
 
         <form className="new-event-form" onSubmit={handleSubmit}>
           <div
             className="new-event-text-field"
-            style={{ backgroundColor: "#fcdfdf" }}
+            style={{ backgroundColor: "#fdddf4" }}
           >
             <label htmlFor="item"></label>
             <input
@@ -58,7 +58,7 @@ function PackingListForm({ togglePackingListForm, id }) {
             />
           </div>
 
-          <div style={{ backgroundColor: "#fcdfdf" }}>
+          <div style={{ backgroundColor: "#fdddf4" }}>
             <button className="new-detail-button" type="submit">
               Done
             </button>

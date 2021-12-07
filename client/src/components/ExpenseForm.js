@@ -43,19 +43,19 @@ function ExpenseForm({ toggleExpenseForm, id, user, guests}) {
       <div onClick={toggleExpenseForm} className="overlay"></div>
       <div
         className="modal-form-content"
-        style={{ backgroundColor: "#cbfcfb" }}
+        style={{ backgroundColor: "#fdddf4" }}
       >
-        <h3 style={{ backgroundColor: "#cbfcfb" }}>Add New Expense</h3>
+        <h3 style={{ backgroundColor: "#fdddf4" }}>Add New Expense</h3>
 
         <form className="new-event-form" onSubmit={handleSubmit}>
         <div
             className="new-event-text-field"
-            style={{ backgroundColor: "#cbfcfb" }}
+            style={{ backgroundColor: "#fdddf4" }}
           >
             <label>
               <select
                 className="event-form-text "
-                style={{ backgroundColor: "#cbfcfb" }}
+                style={{ backgroundColor: "#fdddf4" }}
                 name="id"
                 value={formData.id}
                 onChange={handleChange}
@@ -74,7 +74,7 @@ function ExpenseForm({ toggleExpenseForm, id, user, guests}) {
 
           <div
             className="new-event-text-field"
-            style={{ backgroundColor: "#cbfcfb" }}
+            style={{ backgroundColor: "#fdddf4" }}
           >
             <label htmlFor="name"></label>
             <input
@@ -89,7 +89,7 @@ function ExpenseForm({ toggleExpenseForm, id, user, guests}) {
           </div>
           <div
             className="new-event-text-field"
-            style={{ backgroundColor: "#cbfcfb" }}
+            style={{ backgroundColor: "#fdddf4" }}
           >
             <label htmlFor="details"></label>
             <input
@@ -104,7 +104,7 @@ function ExpenseForm({ toggleExpenseForm, id, user, guests}) {
           </div>
           <div
             className="new-event-text-field"
-            style={{ backgroundColor: "#cbfcfb" }}
+            style={{ backgroundColor: "#fdddf4" }}
           >
             <label htmlFor="amount"></label>
             <input
@@ -118,7 +118,7 @@ function ExpenseForm({ toggleExpenseForm, id, user, guests}) {
             />
           </div>
 
-          <div style={{ backgroundColor: "#cbfcfb" }}>
+          <div style={{ backgroundColor: "#fdddf4" }}>
             <button className="new-detail-button" type="submit">
               Done
             </button>

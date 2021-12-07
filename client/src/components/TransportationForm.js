@@ -45,19 +45,19 @@ function TransportationForm({ toggleTransportationForm, id, user, guests }) {
       <div onClick={toggleTransportationForm} className="overlay"></div>
       <div
         className="modal-form-content"
-        style={{ backgroundColor: "#ffdec0" }}
+        style={{ backgroundColor: "#fdddf4" }}
       >
-        <h3 style={{ backgroundColor: "#ffdec0" }}>Add Transportation</h3>
+        <h3 style={{ backgroundColor: "#fdddf4" }}>Add Transportation</h3>
 
         <form className="new-event-form" onSubmit={handleSubmit}>
           <div
             className="new-event-text-field"
-            style={{ backgroundColor: "#ffdec0" }}
+            style={{ backgroundColor: "#fdddf4" }}
           >
             <label>
               <select
                 className="event-form-text "
-                style={{ backgroundColor: "#ffdec0" }}
+                style={{ backgroundColor: "#fdddf4" }}
                 name="id"
                 value={formData.id}
                 onChange={handleChange}
@@ -76,7 +76,7 @@ function TransportationForm({ toggleTransportationForm, id, user, guests }) {
           
           <div
             className="new-event-text-field"
-            style={{ backgroundColor: "#ffdec0" }}
+            style={{ backgroundColor: "#fdddf4" }}
           >
             <label htmlFor="mode"></label>
             <input
@@ -92,7 +92,7 @@ function TransportationForm({ toggleTransportationForm, id, user, guests }) {
           
           <div
             className="new-event-text-field"
-            style={{ backgroundColor: "#ffdec0" }}
+            style={{ backgroundColor: "#fdddf4" }}
           >
             <label htmlFor="details"></label>
             <input
@@ -108,7 +108,7 @@ function TransportationForm({ toggleTransportationForm, id, user, guests }) {
 
           <div
             className="new-event-text-field"
-            style={{ backgroundColor: "#ffdec0" }}
+            style={{ backgroundColor: "#fdddf4" }}
           >
             <label htmlFor="date"></label>
             <input
@@ -122,7 +122,7 @@ function TransportationForm({ toggleTransportationForm, id, user, guests }) {
             />
           </div>
 
-          <div style={{ backgroundColor: "#ffdec0" }}>
+          <div style={{ backgroundColor: "#fdddf4" }}>
             <button className="new-detail-button" type="submit">
               Done
             </button>

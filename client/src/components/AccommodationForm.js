@@ -39,14 +39,14 @@ function AccommodationForm({ toggleAccommodationForm, id }) {
       <div onClick={toggleAccommodationForm} className="overlay"></div>
       <div
         className="modal-form-content"
-        style={{ backgroundColor: "#c5ebd7" }}
+        style={{ backgroundColor: "#fdddf4" }}
       >
-        <h3 style={{ backgroundColor: "#c5ebd7" }}>Add Accommodations</h3>
+        <h3 style={{ backgroundColor: "#fdddf4" }}>Add Accommodations</h3>
 
         <form className="new-event-form" onSubmit={handleSubmit}>
           <div
             className="new-event-text-field"
-            style={{ backgroundColor: "#c5ebd7" }}
+            style={{ backgroundColor: "#fdddf4" }}
           >
             <label htmlFor="name"></label>
             <input
@@ -61,7 +61,7 @@ function AccommodationForm({ toggleAccommodationForm, id }) {
           </div>
           <div
             className="new-event-text-field"
-            style={{ backgroundColor: "#c5ebd7" }}
+            style={{ backgroundColor: "#fdddf4" }}
           >
             <label htmlFor="address"></label>
             <input
@@ -75,7 +75,7 @@ function AccommodationForm({ toggleAccommodationForm, id }) {
             />
           </div>
 
-          <div style={{ backgroundColor: "#c5ebd7" }}>
+          <div style={{ backgroundColor: "#fdddf4" }}>
             <button className="new-detail-button" type="submit">
               Done
             </button>

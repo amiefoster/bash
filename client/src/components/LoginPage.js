@@ -2,9 +2,9 @@ import React from "react";
 import { useState } from "react";
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
-import logo from "../images/logo-1.png";
+import logo from "../images/logo-5.png";
 import Footer from "./Footer";
-import Background from '../images/background.png'
+//import Background from '../images/background.png'
 
 
 

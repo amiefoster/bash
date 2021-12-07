@@ -62,14 +62,14 @@ function EventForm({ user, toggleForm, addEvent, events, setEvents }) {
       <div onClick={toggleForm} className="overlay"></div>
       <div
         className="modal-form-content event-form"
-        style={{ backgroundColor: "#f5dfee" }}
+        style={{ backgroundColor: "#fdddf4" }}
       >
-        <h3 style={{ backgroundColor: "#f5dfee" }}>Create New Event</h3>
+        <h3 style={{ backgroundColor: "#fdddf4" }}>Create New Event</h3>
 
         <form
           className="new-event-form"
           onSubmit={handleSubmit}
-          style={{ backgroundColor: "#f5dfee" }}
+          style={{ backgroundColor: "#fdddf4" }}
         >
           <div className="new-event-text-field">
             <label htmlFor="name"></label>
@@ -87,13 +87,14 @@ function EventForm({ user, toggleForm, addEvent, events, setEvents }) {
             <label htmlFor="description"></label>
             <input
               className="event-form-text"
-              placeholder="Event Description"
+              placeholder="Description"
               type="text"
               name="description"
               autoComplete="off"
               value={formData.description}
               onChange={handleChange}
             />
+            </div>
             <div className="new-event-text-field">
             <label htmlFor="location"></label>
             <input
@@ -106,7 +107,7 @@ function EventForm({ user, toggleForm, addEvent, events, setEvents }) {
               onChange={handleChange}
             />
           </div>
-          </div>
+          
           <div className="new-event-text-field event-date-field">
             <label className="new-event-text-field" htmlFor="date">Start Date:</label>
             <input
@@ -118,7 +119,6 @@ function EventForm({ user, toggleForm, addEvent, events, setEvents }) {
               value={formData.date}
               onChange={handleChange}
             />
-          </div>
           <div className="new-event-text-field event-date-field">
             <label className="new-event-text-field" htmlFor="date">End Date:</label>
             <input
@@ -129,10 +129,11 @@ function EventForm({ user, toggleForm, addEvent, events, setEvents }) {
               autoComplete="off"
               value={formData.end_date}
               onChange={handleChange}
-            />
+              />
+              </div>
           </div>
           
-          <div style={{ backgroundColor: "#f5dfee" }}>
+          <div style={{ backgroundColor: "#fdddf4" }}>
             <button className="new-detail-button" type="submit">
               Create
             </button>

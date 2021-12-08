@@ -30,6 +30,7 @@
   text-decoration: none;
   color: #010101;
   transform: scale(0.8);
+  
 }
 
 .nav-link:hover {
@@ -40,6 +41,13 @@
 .logo {
   padding-top: 10px;
   height: 70px;
+  will-change: transform;
+  transition: transform 450ms;
+}
+
+.logo:hover{
+  transform: translateY(-10px);
+  transition: transform 125ms;
 }
 
 /* HEADER COLUMNS */
@@ -561,6 +569,10 @@ input:hover {
   height: 25px;
   width: 25px;
   margin: 10px;
+}
+
+.footer-link:hover{
+  transform: scale(0.8);
 }
 
 .stay-link {

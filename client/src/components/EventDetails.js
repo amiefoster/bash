@@ -13,8 +13,6 @@ import Close from '../images/remove.png';
 import Back from '../images/back.png'
 import Trash from '../images/trash.png'
 
-
-
 function EventDetails({ user }) {
   const { eventId } = useParams();
   const [details, setDetails] = useState();

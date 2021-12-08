@@ -322,6 +322,10 @@ input:hover {
   color: white;
   border-radius: 4px;
 }
+.details-name:hover {
+  color: #010101;
+}
+
 .details-name h1 {
   background: none;
 }
@@ -335,6 +339,9 @@ input:hover {
   box-shadow: 0 4px 6px 0 hsl(0deg 0% 0% / 20%);
   border-radius: 4px;
   color: white;
+}
+.activity-header:hover {
+  color: #010101;
 }
 
 .details-delete-btn {
@@ -578,7 +585,7 @@ input:hover {
   margin-left: 30px;
 }
 
-.delete-event-button{
+.delete-event-button {
   justify-content: right;
   text-align: right;
   margin-right: 30px;

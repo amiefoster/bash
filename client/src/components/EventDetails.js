@@ -132,12 +132,12 @@ function EventDetails({ user }) {
           
           <div className="col-sm-2 back-button ">
             <Link to="/">
-              <img src={Back} className="add-event-button" />
+              <img src={Back} className="add-event-button " />
             </Link>
           </div>
 
           <div className="col-sm-9 delete-event-button ">
-            <img src={Trash} className="add-event-button" onClick={() => handleEventDelete(details.id)} />
+            <img src={Trash} className="add-event-button " onClick={() => handleEventDelete(details.id)} />
           </div>
         </div>
       </div>

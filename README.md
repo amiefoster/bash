@@ -18,6 +18,15 @@ Wether your event is a single day party, or multi day vacation, keep track of it
 
 **Server:** Ruby on Rails, PostgresSQL, BCrypt
 
+## Deployed Version
+
+http://letsmakeplanz.herokuapp.com/
+
+### Sample user log in 
+
+username: sampleuser
+password: Password1!
+
 ## Run Locally
 
 Clone the project

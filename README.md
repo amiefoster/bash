@@ -14,7 +14,7 @@ Wether your event is a single day party, or multi day vacation, keep track of it
 
 ## Tech Stack
 
-**Client:** React, Bootstrap
+**Client:** React, Bootstrap, CSS
 
 **Server:** Ruby on Rails, PostgresSQL, BCrypt
 

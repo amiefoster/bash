@@ -28,18 +28,24 @@
 
 .nav-link {
   text-decoration: none;
+  bottom: 0;
   color: #010101;
-  transform: scale(0.8);
+  transform: scale(.7);
+  will-change: transform;
+  transition: transform 600ms;
   
 }
 
 .nav-link:hover {
-  transform: scale(1);
+  transform: translateY(-7px) scale(.8);
+  transition: transform 125ms;
+
 }
 
 /* LOGO */
 .logo {
   padding-top: 10px;
+  padding-bottom: 5px;
   height: 70px;
   will-change: transform;
   transition: transform 450ms;
@@ -70,6 +76,7 @@
   /* border: solid 1px; */
   text-align: right;
   justify-content: right;
+  padding-bottom: 0;
   border-bottom: solid 2px rgba(49, 49, 49);
 }
 
@@ -179,11 +186,13 @@
 .add-event-button {
   border-radius: 10px;
   cursor: pointer;
-  transform: scale(0.8);
+  transform: scale(0.7);
+  will-change: transform;
+  transition: transform 450ms;
 }
 
 .add-event-button:hover {
-  transform: scale(1);
+  transform: scale(.8);
 }
 
 .event-link {
@@ -215,6 +224,8 @@
   cursor: pointer;
   transform: scale(0.9);
   background: none;
+  will-change: transform;
+  transition: transform 400ms;
 }
 
 .add-details-button:hover {

@@ -8,7 +8,15 @@ A centeralized hub for events! Use Planz to invite guests, make an itinerary, ad
 
 Wether your event is a single day party, or multi day vacation, keep track of it all with Planz!
 
+## Demo
+
 ![App Screenshot](planz-demo.gif)
+
+## Tech Stack
+
+**Client:** React, Bootstrap
+
+**Server:** Ruby on Rails, PostgresSQL, BCrypt
 
 ## Run Locally
 

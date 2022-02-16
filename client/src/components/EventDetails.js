@@ -148,6 +148,7 @@ function EventDetails({ user }) {
               </div>
               <div>
                 <p className="details-description">{details.description}</p>
+                <img className="event-image" src={details.imageUrl} />
               </div>
               <div>
                 <p>Hosted by, {details.user.name}</p>

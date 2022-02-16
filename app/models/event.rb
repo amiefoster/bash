@@ -6,6 +6,7 @@ class Event < ApplicationRecord
   has_many :transportations, dependent: :destroy
   has_many :expenses, dependent: :destroy
   has_many :packing_lists, dependent: :destroy
+  has_one_attached :image
 
   validates :name, :location, :date, presence: true
 end

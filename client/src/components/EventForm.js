@@ -20,19 +20,18 @@ function EventForm({ user, toggleForm, addEvent, events, setEvents }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const imageData = new FormData();
+    imageData.append("name", formData.name);
+    imageData.append("description", formData.description);
+    imageData.append("date", formData.date);
+    imageData.append("end_date", formData.end_date);
+    imageData.append("location", formData.location);
+    imageData.append("user_id", user.id);
+    imageData.append("image", event.target.image.files[0], event.target.image.value);
+
     fetch("/events", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: formData.name,
-        description: formData.description,
-        date: formData.date,
-        end_date: formData.end_date,
-        location: formData.location,
-        user_id: user.id,
-      }),
+      body: imageData
     })
       .then((response) => response.json())
       .then((newEvent) => {
@@ -104,6 +103,14 @@ function EventForm({ user, toggleForm, addEvent, events, setEvents }) {
               autoComplete="off"
               value={formData.location}
               onChange={handleChange}
+            />
+          </div>
+          <div className="new-event-text-field">
+            <label htmlFor="image"></label>
+            <input
+              className="event-form-text"
+              type="file"
+              name="image"
             />
           </div>
           

@@ -4,9 +4,9 @@ import Email from '../images/email.png';
 
 function Footer(){
     return(
-        <div className="container login-footer">
+        <div className="login-footer">
             <div className="row footer">
-                <div className="col-sm-5 footer-content">
+                <div className="col footer-content">
                     Made with ♡ by Amie Foster
 
                     <a href="https://github.com/amiefoster" target="_blank">

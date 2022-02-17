@@ -112,6 +112,6 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 end
 
-Rails.application.routes.default_url_options = {
-  host: 'http://letsmakeplanz.herokuapp.com/'
-}
+# Rails.application.routes.default_url_options = {
+#   host: 'http://letsmakeplanz.herokuapp.com/'
+# }
